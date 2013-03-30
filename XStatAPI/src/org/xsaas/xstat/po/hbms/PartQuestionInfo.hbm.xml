@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+		"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="org.xsaas.xstat.po">
+	<class name="PartQuestionInfo" table="part_question_info">
+		<id column="partQuestionid" name="partQuestionID" type="java.lang.Long">
+			<generator class="identity"/>
+		</id>
+		<property column="inquisitionid" name="inquisitionID" type="java.lang.Long"></property>
+		<property column="partid" name="partID" type="java.lang.Long"></property>
+		<property column="questionid" name="questionID" type="java.lang.Long"></property>
+		<property column="questionType" name="questionType" type="java.lang.Integer"></property>
+		<property column="shownum" name="showNum" type="java.lang.Integer"></property>
+		<property column="fieldName" name="fieldName" type="java.lang.String"></property>
+		<property column="fatherPqID" name="fatherPqID" type="java.lang.Long"></property>
+		<property column="validation" name="validation" type="java.lang.Integer"></property>
+		<property column="selectType" name="selectType" type="java.lang.Integer"></property>
+		<property column="optionTemplateID" name="optionTemplateID" type="java.lang.Long"></property>		
+		<property column="status" name="status" type="java.lang.Integer"></property>	
+	</class>
+</hibernate-mapping>

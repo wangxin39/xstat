@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+		"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="org.xsaas.xstat.po">
+	<class name="ClientPopedomInfo" table="client_popedom_info">
+		<id column="clientpopedomid" name="clientPopedomID" type="java.lang.Long">
+			<generator class="identity"/>
+		</id>		
+		<property column="clientid" name="clientID" type="java.lang.Long"></property>
+		<property column="planid" name="planID" type="java.lang.Long"></property>	
+		<property column="issueid" name="issueID" type="java.lang.Long"></property>	
+		<property column="accountid" name="accountID" type="java.lang.Long"></property>	
+		<property column="popedom" name="popedom" type="java.lang.Integer"></property>
+		<property column="status" name="status" type="java.lang.Integer"></property>											
+	</class>
+</hibernate-mapping>

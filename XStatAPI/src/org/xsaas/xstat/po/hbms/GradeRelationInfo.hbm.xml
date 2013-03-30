@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+		"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="org.xsaas.xstat.po">
+	<class name="GradeRelationInfo" table="grade_relation_info">
+		<id column="gradeRelationID" name="gradeRelationID" type="java.lang.Long">
+			<generator class="identity"/>
+		</id>
+		<property column="clientID" name="clientID" type="java.lang.Long"></property>	
+		<property column="issueID" name="issueID" type="java.lang.Long"></property>
+	    <property column="informantID" name="informantID" type="java.lang.Long"></property>
+	    <property column="gradeStdID" name="gradeStdID" type="java.lang.Long"></property>
+		<property column="status" name="status" type="java.lang.Integer"></property>	
+	</class>
+</hibernate-mapping>

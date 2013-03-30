@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+		"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="org.xsaas.xstat.po">
+	<class name="InquisitionMarkInfo" table="inquisition_mark_info">
+		<id column="inquisitionmarkid" name="inquisitionMarkID" type="java.lang.Long">
+			<generator class="identity"/>
+		</id>
+		<property column="year" name="year" type="java.lang.Integer"></property>
+		<property column="month" name="month" type="java.lang.Integer"></property>
+		<property column="day" name="day" type="java.lang.Integer"></property>
+		<property column="checktime" name="checkTime" type="java.sql.Timestamp"></property>
+		<property column="clientid" name="clientID" type="java.lang.Long"></property>
+		<property column="projectid" name="projectID" type="java.lang.Long"></property>
+		<property column="issueid" name="issueID" type="java.lang.Long"></property>
+		<property column="smgkid" name="smgkID" type="java.lang.Long"></property>
+		<property column="informantid" name="informantID" type="java.lang.Long"></property>
+		<property column="inquisitionid" name="inquisitionID" type="java.lang.Long"></property>		
+		<property column="weightMarkRound1" name="weightMarkRound1" type="java.lang.Integer"></property>		
+		<property column="actualMarkRound1" name="actualMarkRound1" type="java.lang.Integer"></property>
+		<property column="scoreMarkRound1" name="scoreMarkRound1" type="java.lang.Double"></property>		
+		<property column="weightMarkRound2" name="weightMarkRound2" type="java.lang.Integer"></property>		
+		<property column="actualMarkRound2" name="actualMarkRound2" type="java.lang.Integer"></property>
+		<property column="scoreMarkRound2" name="scoreMarkRound2" type="java.lang.Double"></property>
+		<property column="average" name="average" type="java.lang.Double"></property>
+	</class>
+	
+</hibernate-mapping>

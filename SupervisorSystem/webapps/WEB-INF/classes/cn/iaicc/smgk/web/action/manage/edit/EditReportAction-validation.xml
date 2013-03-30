@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="GBK"?>
+<!DOCTYPE validators PUBLIC "-//OpenSymphony Group//XWork Validator 1.0.2//EN"
+	"http://www.opensymphony.com/xwork/xwork-validator-1.0.2.dtd">
+
+<validators>
+
+	<field name="reportTitle">
+		<field-validator type="requiredstring">
+			<param name="trim">true</param>
+			<message>必须输入报告名称</message>
+		</field-validator>
+		<field-validator type="regex">
+			<param name="expression"><![CDATA[([\u4e00-\u9fa5]{2,255})]]></param>
+			<message>您输入的报告名称长度在2到255个汉字以内!</message>
+		</field-validator>
+	</field>
+
+</validators>

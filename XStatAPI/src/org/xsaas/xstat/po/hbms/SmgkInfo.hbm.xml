@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+		"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="org.xsaas.xstat.po">
+	<class name="SmgkInfo" table="smgk_info">
+		<id column="smgkid" name="smgkID" type="java.lang.Long">
+			<generator class="identity"/>
+		</id>
+		<property column="username" name="userName" type="java.lang.String"></property>				
+		<property column="password" name="passWord" type="java.lang.String"></property>				
+		<property column="cityid" name="cityID" type="java.lang.Long"></property>			
+		<property column="province" name="province" type="java.lang.Integer"></property>				
+		<property column="realname" name="realName" type="java.lang.String"></property>	
+		<property column="telephone" name="telephone" type="java.lang.String"></property>	
+		<property column="mobile" name="mobile" type="java.lang.String"></property>				
+		<property column="birthday" name="birthDay" type="java.lang.String"></property>				
+		<property column="sex" name="sex" type="java.lang.String"></property>	
+		<property column="nation" name="nation" type="java.lang.Integer"></property>				
+		<property column="marriage" name="marriAge" type="java.lang.String"></property>
+		<property column="stature" name="stature" type="java.lang.String"></property>				
+		<property column="avoirdupois" name="avoirdupois" type="java.lang.String"></property>	
+		<property column="education" name="education" type="java.lang.Integer"></property>				
+		<property column="speciality" name="speciality" type="java.lang.String"></property>	
+		<property column="vocation" name="vocation" type="java.lang.String"></property>				
+		<property column="job" name="job" type="java.lang.String"></property>
+		<property column="company" name="company" type="java.lang.String"></property>	
+		<property column="postcode" name="postCode" type="java.lang.String"></property>				
+		<property column="QQ" name="QQ" type="java.lang.String"></property>	
+		<property column="MSN" name="MSN" type="java.lang.String"></property>				
+		<property column="address" name="address" type="java.lang.String"></property>	
+		<property column="edu" name="edu" type="java.lang.String"></property>				
+		<property column="interest" name="interest" type="java.lang.String"></property>
+		<property column="device" name="device" type="java.lang.String"></property>				
+		<property column="possession" name="possession" type="java.lang.String"></property>	
+		<property column="bank" name="bank" type="java.lang.String"></property>				
+		<property column="bankid" name="bankID" type="java.lang.String"></property>	
+		<property column="bankusername" name="bankUserName" type="java.lang.String"></property>				
+		<property column="status" name="status" type="java.lang.Integer"></property>
+		<property column="regtime" name="regTime" type="java.sql.Timestamp"></property>	
+		<property column="code" name="code" type="java.lang.String"></property>	
+		<property column="idNumber" name="idNumber" type="java.lang.String"></property>	
+		<property column="idfilename" name="idFileName" type="java.lang.String"></property>	
+		<property column="authstatus" name="authStatus" type="java.lang.Integer"></property>
+		<property column="filetype" name="fileType" type="java.lang.Integer"></property>
+		<property column="regstatus" name="RegStatus" type="java.lang.Integer"></property>																											
+	</class>
+</hibernate-mapping>

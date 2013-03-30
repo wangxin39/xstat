@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="default" extends="struts-default,jasperreports-default">
+		<result-types>
+			<result-type name="jasper" class="org.apache.struts2.views.jasperreports.JasperReportsResult"/>
+			<!--  HTML静态页面生成  -->
+			<result-type name="staticview" class="cn.iaicc.smgk.web.action.FreemarkerResult"/>
+		</result-types>	
+   		<global-results>
+   			<result name="exception">/WEB-INF/pages/error.jsp</result>
+   			<result name="login" type="redirect">/admin</result>
+   		</global-results>
+   		<global-exception-mappings>
+   			<exception-mapping result="exception" exception="java.lang.Exception"/>
+   		</global-exception-mappings>
+		<action name="iqList" class="cn.iaicc.smgk.web.action.InquestionAction">
+			<!-- 利用freemarker生成静态网页
+			<result name="success" type="staticview">
+				<param name="location">/WEB-INF/ftl/inquestion.ftl</param>
+				<param name="contentType">text/html</param>
+				<param name="fileName">${filename}</param>
+				<param name="staticTemplate">/WEB-INF/ftl/inquestion.ftl</param>
+				<param name="filePath">html</param>
+			</result>
+		 	-->
+		 	<!-- 调用ftl输出html  -->
+		 	<result name="success" type="freemarker">/WEB-INF/ftl/inquestion.ftl</result>
+		</action>	
+		<action name="Preview" class="cn.iaicc.smgk.web.action.PreviewAction">
+		 	<result name="success" type="freemarker">${templateUrl}</result>
+		</action>
+		
+		<action name="Login" class="cn.iaicc.smgk.web.action.LoginAction">
+			<result name="input">/admin/index.jsp</result>
+			<result name="success" type="redirect-action">/manage/listMain</result>
+		</action>
+		<action name="Logout" class="cn.iaicc.smgk.web.action.LogoutAction">
+			<result name="input">/admin/index.jsp</result>
+			<result name="success" type="redirect-action">/manage/listMain</result>
+		</action>
+		<action name="authImage" class="cn.iaicc.smgk.web.action.AuthImgAction">
+			<result type="stream">
+	            <param name="contentType">${contentType}</param>   
+	            <param name="inputName">imageStream</param> 
+	            <param name="contentDisposition">filename=${fileName}</param>	              
+	            <param name="bufferSize">1024</param>
+			</result>
+		</action>
+	</package>	  
+
+</struts>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+		"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="org.xsaas.xstat.po">
+	<class name="CityInfo" table="city_info">
+		<id column="cityid" name="cityID" type="java.lang.Long">
+			<generator class="identity"/>
+		</id>		
+		<property column="name" name="name" type="java.lang.String"></property>
+		<property column="province" name="province" type="java.lang.Integer"></property>
+		<property column="englishname" name="englishName" type="java.lang.String"></property>	
+		<property column="status" name="status" type="java.lang.Integer"></property>												
+	</class>
+</hibernate-mapping>

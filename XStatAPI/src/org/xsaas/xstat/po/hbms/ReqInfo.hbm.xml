@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+		"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="org.xsaas.xstat.po">
+	<class name="ReqInfo" table="req_info">
+		<id column="reqid" name="reqID" type="java.lang.Long">
+			<generator class="identity"/>
+		</id>		
+		<property column="accountid" name="accountID" type="java.lang.Long"></property>
+		<property column="employeeid" name="employeeID" type="java.lang.Long"></property>
+		<property column="status" name="status" type="java.lang.Integer"></property>
+		<property column="reqtime" name="reqTime" type="java.sql.Timestamp"></property>																												
+		<property column="description" name="description" type="java.lang.String"></property>	
+		<property column="telephone" name="telephone" type="java.lang.String"></property>
+		<property column="name" name="name" type="java.lang.String"></property>
+		<property column="email" name="email" type="java.lang.String"></property>	
+		<property column="reqstatus" name="reqStatus" type="java.lang.Integer"></property>
+	</class>
+</hibernate-mapping>

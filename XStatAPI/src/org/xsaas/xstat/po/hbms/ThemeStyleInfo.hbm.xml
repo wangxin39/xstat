@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+		"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="org.xsaas.xstat.po">
+	<class name="ThemeStyleInfo" table="theme_style_info">
+		<id column="styleid" name="styleID" type="java.lang.Long">
+			<generator class="identity"/>
+		</id>
+		<property column="themeid" name="themeID" type="java.lang.Long"></property>
+		<property column="reporttemplateid" name="reportTemplateID" type="java.lang.Long"></property>
+		<property column="pageNum" name="pageNum" type="java.lang.Integer"></property>
+		<property column="stattype" name="statType" type="java.lang.Integer"></property>
+		<property column="statchart" name="statChart" type="java.lang.String"></property>
+		<property column="title" name="title" type="java.lang.String"></property>
+		<property column="content" name="content" type="java.lang.String"></property>
+		<property column="isbackimage" name="isBackImage" type="java.lang.Integer"></property>
+		<property column="imagename" name="imageName" type="java.lang.String"></property>
+		<property column="savepath" name="savePath" type="java.lang.String"></property>
+		<property column="status" name="status" type="java.lang.Integer"></property>												
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,1528 @@
+<?xml version="1.0" encoding="UTF-8"  ?>
+<!-- Created with iReport - A designer for JasperReports -->
+<!DOCTYPE jasperReport PUBLIC "//JasperReports//DTD Report Design//EN" "http://jasperreports.sourceforge.net/dtds/jasperreport.dtd">
+<jasperReport
+		 name="evaluation"
+		 columnCount="1"
+		 printOrder="Vertical"
+		 orientation="Portrait"
+		 pageWidth="1024"
+		 pageHeight="800"
+		 columnWidth="535"
+		 columnSpacing="0"
+		 leftMargin="0"
+		 rightMargin="0"
+		 topMargin="0"
+		 bottomMargin="0"
+		 whenNoDataType="NoPages"
+		 isTitleNewPage="false"
+		 isSummaryNewPage="false">
+	<property name="ireport.scriptlethandling" value="0" />
+	<property name="ireport.encoding" value="UTF-8" />
+	<import value="java.util.*" />
+	<import value="net.sf.jasperreports.engine.*" />
+	<import value="net.sf.jasperreports.engine.data.*" />
+
+	<style 
+		name="Arial_Normal"
+		isDefault="true"
+		fontName="宋体"
+		fontSize="12"
+		isBold="false"
+		isItalic="false"
+		isUnderline="false"
+		isStrikeThrough="false"
+		pdfFontName="STSong-Light"
+		pdfEncoding="UniGB-UCS2-H"
+		isPdfEmbedded="true"
+	>
+	</style>
+	<style 
+		name="Arial_Bold"
+		isDefault="false"
+		fontName="宋体"
+		fontSize="12"
+		isBold="true"
+		isItalic="false"
+		isUnderline="false"
+		isStrikeThrough="false"
+		pdfFontName="STSong-Light"
+		pdfEncoding="UniGB-UCS2-H"
+		isPdfEmbedded="true"
+	>
+	</style>
+	<style 
+		name="Arial_Italic"
+		isDefault="false"
+		fontName="宋体"
+		fontSize="12"
+		isBold="false"
+		isItalic="true"
+		isUnderline="false"
+		isStrikeThrough="false"
+		pdfFontName="STSong-Light"
+		pdfEncoding="UniGB-UCS2-H"
+		isPdfEmbedded="true"
+	>
+	</style>
+
+	<field name="title" class="java.lang.String"/>
+	<field name="informantName" class="java.lang.String"/>	
+	<field name="informantTitle" class="java.lang.String"/>	
+	<field name="addressName" class="java.lang.String"/>
+	<field name="address" class="java.lang.String"/>
+	<field name="country" class="java.lang.String"/>
+	<field name="roundName1" class="java.lang.String"/>
+	<field name="roundName2" class="java.lang.String"/>
+	<field name="checkDateName" class="java.lang.String"/>
+	<field name="checkDateRound1" class="java.lang.String"/>
+	<field name="checkDateRound2" class="java.lang.String"/>	
+	<field name="timeName" class="java.lang.String"/>
+	<field name="timeRound1" class="java.lang.String"/>
+	<field name="timeRound2" class="java.lang.String"/>	
+	<field name="saleName" class="java.lang.String"/>
+	<field name="saleRound1" class="java.lang.String"/>
+	<field name="saleRound2" class="java.lang.String"/>
+	<field name="carTypeName" class="java.lang.String"/>
+	<field name="carTypeRound1" class="java.lang.String"/>	
+	<field name="carTypeRound2" class="java.lang.String"/>	
+	<field name="headerName" class="java.lang.String"/>
+	<field name="markName" class="java.lang.String"/>
+	<field name="minMarkName" class="java.lang.String"/>
+	<field name="passOrFailName" class="java.lang.String"/>
+	<field name="h1" class="java.lang.String"/>
+	<field name="v1" class="java.lang.String"/>
+	<field name="h2" class="java.lang.String"/>
+	<field name="v2" class="java.lang.String"/>
+	<field name="h3" class="java.lang.String"/>
+	<field name="v3" class="java.lang.String"/>
+	<field name="part1" class="java.lang.String"/>
+	<field name="part1v1" class="java.lang.String"/>
+	<field name="part1v2" class="java.lang.String"/>
+	<field name="part1v3" class="java.lang.String"/>
+	<field name="part1v4" class="java.lang.String"/>				
+	<field name="part2" class="java.lang.String"/>
+	<field name="part2v1" class="java.lang.String"/>
+	<field name="part2v2" class="java.lang.String"/>
+	<field name="part2v3" class="java.lang.String"/>
+	<field name="part2v4" class="java.lang.String"/>	
+	<field name="part3" class="java.lang.String"/>
+	<field name="part3v1" class="java.lang.String"/>
+	<field name="part3v2" class="java.lang.String"/>
+	<field name="part3v3" class="java.lang.String"/>
+	<field name="part3v4" class="java.lang.String"/>
+	<field name="part4" class="java.lang.String"/>
+	<field name="part4v1" class="java.lang.String"/>
+	<field name="part4v2" class="java.lang.String"/>
+	<field name="part4v3" class="java.lang.String"/>
+	<field name="part4v4" class="java.lang.String"/>
+	<field name="part5" class="java.lang.String"/>
+	<field name="part5v1" class="java.lang.String"/>
+	<field name="part5v2" class="java.lang.String"/>
+	<field name="part5v3" class="java.lang.String"/>
+	<field name="part5v4" class="java.lang.String"/>
+	<field name="part6" class="java.lang.String"/>
+	<field name="part6v1" class="java.lang.String"/>
+	<field name="part6v2" class="java.lang.String"/>
+	<field name="part6v3" class="java.lang.String"/>
+	<field name="part6v4" class="java.lang.String"/>
+
+	<field name="commentsName" class="java.lang.String"/>
+	<field name="comments" class="java.lang.String"/>
+	<field name="managerName" class="java.lang.String"/>
+	<field name="companyName" class="java.lang.String"/>
+	
+	<field name="backImage" class="java.lang.String"/>
+
+		<background>
+			<band height="800"  isSplitAllowed="true" >
+				<image  scaleImage="Clip" vAlign="Bottom" hAlign="Left" onErrorType="Blank" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="10"
+						y="10"
+						width="1024"
+						height="766"
+						key="image"/>
+					<box></box>
+					<graphicElement stretchType="NoStretch"/>
+					<imageExpression class="java.lang.String"><![CDATA[$F{backImage}]]></imageExpression>
+				</image>
+			</band>
+		</background>
+		<title>
+			<band height="50"  isSplitAllowed="true" >
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Arial_Normal"
+						x="69"
+						y="7"
+						width="237"
+						height="35"
+						key="textField-1"/>
+					<box></box>
+					<textElement>
+						<font size="20" isBold="true"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{title}]]></textFieldExpression>
+				</textField>
+			</band>
+		</title>
+		<pageHeader>
+			<band height="17"  isSplitAllowed="true" >
+			</band>
+		</pageHeader>
+		<columnHeader>
+			<band height="15"  isSplitAllowed="true" >
+			</band>
+		</columnHeader>
+		<detail>
+			<band height="451"  isSplitAllowed="true" >
+				<staticText>
+					<reportElement
+						style="Arial_Normal"
+						x="69"
+						y="16"
+						width="862"
+						height="426"
+						key="staticText-1"/>
+					<box>					<pen lineWidth="3.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<topPen lineWidth="3.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<leftPen lineWidth="3.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<bottomPen lineWidth="3.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<rightPen lineWidth="3.0" lineStyle="Solid" lineColor="#3300CC"/>
+</box>
+					<textElement>
+						<font size="12" isBold="true"/>
+					</textElement>
+				<text><![CDATA[]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Arial_Normal"
+						x="234"
+						y="17"
+						width="159"
+						height="17"
+						key="textField"/>
+					<box>					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+</box>
+					<textElement textAlignment="Center">
+						<font size="12" isBold="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{informantTitle}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Arial_Normal"
+						x="75"
+						y="141"
+						width="117"
+						height="17"
+						key="textField"/>
+					<box>					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+</box>
+					<textElement textAlignment="Center">
+						<font size="14" isBold="true"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{part1}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Arial_Normal"
+						x="74"
+						y="160"
+						width="117"
+						height="20"
+						key="textField"/>
+					<box>					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#330099"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#330099"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#330099"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#330099"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#330099"/>
+</box>
+					<textElement textAlignment="Center">
+						<font size="14" isBold="true"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{part2}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Arial_Normal"
+						x="199"
+						y="141"
+						width="293"
+						height="17"
+						key="textField"/>
+					<box>					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#330099"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#330099"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#330099"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#330099"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#330099"/>
+</box>
+					<textElement>
+						<font/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{part1v1}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Arial_Normal"
+						x="199"
+						y="161"
+						width="292"
+						height="19"
+						key="textField"/>
+					<box>					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#330099"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#330099"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#330099"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#330099"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#330099"/>
+</box>
+					<textElement>
+						<font/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{part2v1}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Arial_Normal"
+						x="74"
+						y="18"
+						width="157"
+						height="17"
+						key="textField-2"/>
+					<box>					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+</box>
+					<textElement textAlignment="Center">
+						<font size="12" isBold="true"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{informantName}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Arial_Normal"
+						x="234"
+						y="37"
+						width="159"
+						height="57"
+						key="textField-3"/>
+					<box>					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+</box>
+					<textElement textAlignment="Center">
+						<font size="12" isBold="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{address}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Arial_Normal"
+						x="74"
+						y="38"
+						width="157"
+						height="25"
+						key="textField-4"/>
+					<box>					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+</box>
+					<textElement textAlignment="Center">
+						<font size="12" isBold="true"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{addressName}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Arial_Normal"
+						x="398"
+						y="37"
+						width="171"
+						height="17"
+						key="textField-5"/>
+					<box>					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+</box>
+					<textElement textAlignment="Center">
+						<font size="12" isBold="true"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{checkDateName}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Arial_Normal"
+						x="398"
+						y="58"
+						width="171"
+						height="17"
+						key="textField-6"/>
+					<box>					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+</box>
+					<textElement textAlignment="Center">
+						<font size="12" isBold="true"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{timeName}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Arial_Normal"
+						x="398"
+						y="78"
+						width="171"
+						height="16"
+						key="textField-7"/>
+					<box>					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+</box>
+					<textElement textAlignment="Center">
+						<font size="12" isBold="true"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{saleName}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Arial_Normal"
+						x="398"
+						y="96"
+						width="171"
+						height="15"
+						key="textField-8"/>
+					<box>					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+</box>
+					<textElement textAlignment="Center">
+						<font size="12" isBold="true"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{carTypeName}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						style="Arial_Normal"
+						x="398"
+						y="17"
+						width="171"
+						height="17"
+						key="staticText-2"/>
+					<box>					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#330099"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#330099"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#330099"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#330099"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#330099"/>
+</box>
+					<textElement>
+						<font/>
+					</textElement>
+				<text><![CDATA[]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Arial_Normal"
+						x="571"
+						y="37"
+						width="171"
+						height="17"
+						key="textField-9"/>
+					<box>					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+</box>
+					<textElement textAlignment="Center">
+						<font size="12" isBold="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{checkDateRound1}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Arial_Normal"
+						x="745"
+						y="37"
+						width="171"
+						height="17"
+						key="textField-10"/>
+					<box>					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+</box>
+					<textElement textAlignment="Center">
+						<font size="12" isBold="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{checkDateRound2}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Arial_Normal"
+						x="571"
+						y="58"
+						width="171"
+						height="17"
+						key="textField-11"/>
+					<box>					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+</box>
+					<textElement textAlignment="Center">
+						<font size="12" isBold="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{timeRound1}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Arial_Normal"
+						x="745"
+						y="58"
+						width="171"
+						height="17"
+						key="textField-12"/>
+					<box>					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+</box>
+					<textElement textAlignment="Center">
+						<font size="12" isBold="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{timeRound2}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Arial_Normal"
+						x="571"
+						y="78"
+						width="171"
+						height="16"
+						key="textField-13"/>
+					<box>					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+</box>
+					<textElement textAlignment="Center">
+						<font size="12" isBold="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{saleRound1}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Arial_Normal"
+						x="745"
+						y="78"
+						width="171"
+						height="16"
+						key="textField-14"/>
+					<box>					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+</box>
+					<textElement textAlignment="Center">
+						<font size="12" isBold="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{saleRound2}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Arial_Normal"
+						x="571"
+						y="17"
+						width="171"
+						height="17"
+						key="textField-15"/>
+					<box>					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+</box>
+					<textElement textAlignment="Center">
+						<font size="12" isBold="true"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{roundName1}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Arial_Normal"
+						x="745"
+						y="17"
+						width="171"
+						height="17"
+						key="textField-16"/>
+					<box>					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+</box>
+					<textElement textAlignment="Center">
+						<font size="12" isBold="true"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{roundName2}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Arial_Normal"
+						x="571"
+						y="96"
+						width="171"
+						height="15"
+						key="textField-17"/>
+					<box>					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+</box>
+					<textElement textAlignment="Center">
+						<font size="12" isBold="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{carTypeRound1}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Arial_Normal"
+						x="745"
+						y="96"
+						width="171"
+						height="15"
+						key="textField-18"/>
+					<box>					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+</box>
+					<textElement textAlignment="Center">
+						<font size="12" isBold="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{carTypeRound2}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						style="Arial_Normal"
+						x="73"
+						y="65"
+						width="157"
+						height="49"
+						key="staticText-7"/>
+					<box>					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#330099"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#330099"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#330099"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#330099"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#330099"/>
+</box>
+					<textElement>
+						<font/>
+					</textElement>
+				<text><![CDATA[]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Arial_Normal"
+						x="198"
+						y="116"
+						width="295"
+						height="21"
+						key="textField-19"/>
+					<box>					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+</box>
+					<textElement textAlignment="Center">
+						<font size="14" isBold="true"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{headerName}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Arial_Normal"
+						x="495"
+						y="116"
+						width="119"
+						height="21"
+						key="textField-20"/>
+					<box>					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+</box>
+					<textElement textAlignment="Center">
+						<font size="14" isBold="true"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{markName}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Arial_Normal"
+						x="617"
+						y="115"
+						width="136"
+						height="21"
+						key="textField-21"/>
+					<box>					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+</box>
+					<textElement textAlignment="Center">
+						<font size="14" isBold="true"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{minMarkName}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Arial_Normal"
+						x="758"
+						y="116"
+						width="158"
+						height="21"
+						key="textField-22"/>
+					<box>					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+</box>
+					<textElement textAlignment="Center">
+						<font size="14" isBold="true"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{passOrFailName}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Arial_Normal"
+						x="495"
+						y="141"
+						width="119"
+						height="18"
+						key="textField-23"/>
+					<box>					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+</box>
+					<textElement textAlignment="Center">
+						<font size="12" isBold="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{part1v2}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Arial_Normal"
+						x="617"
+						y="140"
+						width="136"
+						height="18"
+						key="textField-24"/>
+					<box>					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+</box>
+					<textElement textAlignment="Center">
+						<font size="12" isBold="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{part1v3}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Arial_Normal"
+						x="758"
+						y="141"
+						width="158"
+						height="18"
+						key="textField-25"/>
+					<box>					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+</box>
+					<textElement textAlignment="Center">
+						<font size="12" isBold="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{part1v4}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Arial_Normal"
+						x="495"
+						y="160"
+						width="119"
+						height="21"
+						key="textField-26"/>
+					<box>					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+</box>
+					<textElement textAlignment="Center">
+						<font size="12" isBold="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{part2v2}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Arial_Normal"
+						x="617"
+						y="159"
+						width="136"
+						height="21"
+						key="textField-27"/>
+					<box>					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+</box>
+					<textElement textAlignment="Center">
+						<font size="12" isBold="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{part2v3}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Arial_Normal"
+						x="758"
+						y="160"
+						width="158"
+						height="21"
+						key="textField-28"/>
+					<box>					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+</box>
+					<textElement textAlignment="Center">
+						<font size="12" isBold="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{part2v4}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Arial_Normal"
+						x="74"
+						y="184"
+						width="117"
+						height="18"
+						key="textField-29"/>
+					<box>					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#330099"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#330099"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#330099"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#330099"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#330099"/>
+</box>
+					<textElement textAlignment="Center">
+						<font size="14" isBold="true"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{part3}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Arial_Normal"
+						x="199"
+						y="185"
+						width="292"
+						height="17"
+						key="textField-30"/>
+					<box>					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#330099"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#330099"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#330099"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#330099"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#330099"/>
+</box>
+					<textElement>
+						<font/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{part3v1}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Arial_Normal"
+						x="495"
+						y="184"
+						width="119"
+						height="19"
+						key="textField-31"/>
+					<box>					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+</box>
+					<textElement textAlignment="Center">
+						<font size="12" isBold="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{part3v2}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Arial_Normal"
+						x="617"
+						y="183"
+						width="136"
+						height="19"
+						key="textField-32"/>
+					<box>					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+</box>
+					<textElement textAlignment="Center">
+						<font size="12" isBold="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{part3v3}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Arial_Normal"
+						x="758"
+						y="184"
+						width="158"
+						height="19"
+						key="textField-33"/>
+					<box>					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+</box>
+					<textElement textAlignment="Center">
+						<font size="12" isBold="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{part3v4}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Arial_Normal"
+						x="74"
+						y="206"
+						width="117"
+						height="18"
+						key="textField-34"/>
+					<box>					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#330099"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#330099"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#330099"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#330099"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#330099"/>
+</box>
+					<textElement textAlignment="Center">
+						<font size="14" isBold="true"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{part4}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Arial_Normal"
+						x="199"
+						y="207"
+						width="292"
+						height="17"
+						key="textField-35"/>
+					<box>					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#330099"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#330099"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#330099"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#330099"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#330099"/>
+</box>
+					<textElement>
+						<font/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{part4v1}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Arial_Normal"
+						x="495"
+						y="206"
+						width="119"
+						height="19"
+						key="textField-36"/>
+					<box>					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+</box>
+					<textElement textAlignment="Center">
+						<font size="12" isBold="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{part4v2}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Arial_Normal"
+						x="617"
+						y="205"
+						width="136"
+						height="19"
+						key="textField-37"/>
+					<box>					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+</box>
+					<textElement textAlignment="Center">
+						<font size="12" isBold="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{part4v3}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Arial_Normal"
+						x="758"
+						y="206"
+						width="158"
+						height="19"
+						key="textField-38"/>
+					<box>					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+</box>
+					<textElement textAlignment="Center">
+						<font size="12" isBold="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{part4v4}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Arial_Normal"
+						x="74"
+						y="228"
+						width="117"
+						height="18"
+						key="textField-39"/>
+					<box>					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#330099"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#330099"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#330099"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#330099"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#330099"/>
+</box>
+					<textElement textAlignment="Center">
+						<font size="14" isBold="true"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{part5}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Arial_Normal"
+						x="199"
+						y="229"
+						width="292"
+						height="17"
+						key="textField-40"/>
+					<box>					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#330099"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#330099"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#330099"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#330099"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#330099"/>
+</box>
+					<textElement>
+						<font/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{part5v1}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Arial_Normal"
+						x="495"
+						y="228"
+						width="119"
+						height="19"
+						key="textField-41"/>
+					<box>					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+</box>
+					<textElement textAlignment="Center">
+						<font size="12" isBold="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{part5v2}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Arial_Normal"
+						x="617"
+						y="227"
+						width="136"
+						height="19"
+						key="textField-42"/>
+					<box>					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+</box>
+					<textElement textAlignment="Center">
+						<font size="12" isBold="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{part5v3}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Arial_Normal"
+						x="758"
+						y="228"
+						width="158"
+						height="19"
+						key="textField-43"/>
+					<box>					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+</box>
+					<textElement textAlignment="Center">
+						<font size="12" isBold="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{part5v4}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Arial_Normal"
+						x="75"
+						y="249"
+						width="117"
+						height="17"
+						key="textField-44"/>
+					<box>					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#330099"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#330099"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#330099"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#330099"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#330099"/>
+</box>
+					<textElement textAlignment="Center">
+						<font size="14" isBold="true"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{part6}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Arial_Normal"
+						x="200"
+						y="250"
+						width="292"
+						height="16"
+						key="textField-45"/>
+					<box>					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#330099"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#330099"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#330099"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#330099"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#330099"/>
+</box>
+					<textElement>
+						<font/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{part6v1}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Arial_Normal"
+						x="496"
+						y="249"
+						width="119"
+						height="18"
+						key="textField-46"/>
+					<box>					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+</box>
+					<textElement textAlignment="Center">
+						<font size="12" isBold="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{part6v2}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Arial_Normal"
+						x="618"
+						y="248"
+						width="136"
+						height="18"
+						key="textField-47"/>
+					<box>					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+</box>
+					<textElement textAlignment="Center">
+						<font size="12" isBold="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{part6v3}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Arial_Normal"
+						x="759"
+						y="249"
+						width="158"
+						height="18"
+						key="textField-48"/>
+					<box>					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+</box>
+					<textElement textAlignment="Center">
+						<font size="12" isBold="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{part6v4}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Arial_Normal"
+						x="200"
+						y="270"
+						width="292"
+						height="15"
+						key="textField-49"/>
+					<box>					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#330099"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#330099"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#330099"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#330099"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#330099"/>
+</box>
+					<textElement>
+						<font/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{part7v1}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Arial_Normal"
+						x="496"
+						y="270"
+						width="119"
+						height="17"
+						key="textField-50"/>
+					<box>					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+</box>
+					<textElement textAlignment="Center">
+						<font size="12" isBold="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{part7v2}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Arial_Normal"
+						x="618"
+						y="269"
+						width="136"
+						height="17"
+						key="textField-51"/>
+					<box>					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+</box>
+					<textElement textAlignment="Center">
+						<font size="12" isBold="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{part7v3}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Arial_Normal"
+						x="759"
+						y="270"
+						width="158"
+						height="17"
+						key="textField-52"/>
+					<box>					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+</box>
+					<textElement textAlignment="Center">
+						<font size="12" isBold="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{part7v4}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Arial_Normal"
+						x="233"
+						y="96"
+						width="159"
+						height="16"
+						key="textField-53"/>
+					<box>					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+</box>
+					<textElement textAlignment="Center">
+						<font size="12" isBold="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{country}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Arial_Normal"
+						x="200"
+						y="292"
+						width="292"
+						height="19"
+						key="textField-54"/>
+					<box>					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#330099"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#330099"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#330099"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#330099"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#330099"/>
+</box>
+					<textElement>
+						<font size="14" isBold="true"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{h1}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Arial_Normal"
+						x="200"
+						y="316"
+						width="292"
+						height="22"
+						key="textField-55"/>
+					<box>					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#330099"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#330099"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#330099"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#330099"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#330099"/>
+</box>
+					<textElement>
+						<font size="14" isBold="true"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{h2}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Arial_Normal"
+						x="497"
+						y="316"
+						width="119"
+						height="24"
+						key="textField-56"/>
+					<box>					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+</box>
+					<textElement textAlignment="Center">
+						<font size="14" isBold="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{v2}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Arial_Normal"
+						x="497"
+						y="291"
+						width="119"
+						height="22"
+						key="textField-57"/>
+					<box>					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+</box>
+					<textElement textAlignment="Center">
+						<font size="14" isBold="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{v1}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Arial_Normal"
+						x="622"
+						y="303"
+						width="133"
+						height="34"
+						key="textField-58"/>
+					<box>					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+</box>
+					<textElement textAlignment="Center">
+						<font size="18" isBold="true"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{h3}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Arial_Normal"
+						x="758"
+						y="303"
+						width="133"
+						height="34"
+						key="textField-59"/>
+					<box>					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+</box>
+					<textElement textAlignment="Center">
+						<font size="18" isBold="false"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{v3}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Arial_Normal"
+						x="74"
+						y="350"
+						width="124"
+						height="33"
+						key="textField-60"/>
+					<box>					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#330099"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#330099"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#330099"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#330099"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#330099"/>
+</box>
+					<textElement>
+						<font size="14" isBold="true"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{commentsName}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Arial_Normal"
+						x="202"
+						y="351"
+						width="713"
+						height="33"
+						key="textField-61"/>
+					<box>					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#330099"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#330099"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#330099"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#330099"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#330099"/>
+</box>
+					<textElement>
+						<font size="14" isBold="true"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{comments}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Arial_Normal"
+						x="153"
+						y="394"
+						width="124"
+						height="33"
+						key="textField-62"/>
+					<box>					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#330099"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#330099"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#330099"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#330099"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#330099"/>
+</box>
+					<textElement>
+						<font size="14" isBold="true"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{managerName}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Arial_Normal"
+						x="659"
+						y="393"
+						width="256"
+						height="33"
+						key="textField-63"/>
+					<box>					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#330099"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#330099"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#330099"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#330099"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#330099"/>
+</box>
+					<textElement>
+						<font size="14" isBold="true"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{companyName}]]></textFieldExpression>
+				</textField>
+			</band>
+		</detail>
+		<columnFooter>
+			<band height="17"  isSplitAllowed="true" >
+			</band>
+		</columnFooter>
+		<pageFooter>
+			<band height="20"  isSplitAllowed="true" >
+			</band>
+		</pageFooter>
+		<lastPageFooter>
+			<band height="24"  isSplitAllowed="true" >
+			</band>
+		</lastPageFooter>
+		<summary>
+			<band height="93"  isSplitAllowed="true" >
+			</band>
+		</summary>
+</jasperReport>

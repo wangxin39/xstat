@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="GBK"?>
+<!DOCTYPE validators PUBLIC "-//OpenSymphony Group//XWork Validator 1.0.2//EN"
+	"http://www.opensymphony.com/xwork/xwork-validator-1.0.2.dtd">
+
+<validators>
+
+	<field name="answer">
+		<field-validator type="requiredstring">
+			<param name="trim">true</param>
+			<message>必须输入答案</message>
+		</field-validator>
+		<field-validator type="regex">
+			<param name="expression"><![CDATA[([\u4e00-\u9fa5]{2,255})]]></param>
+			<message>您输入的答案长度在2到255个汉字以内!</message>
+		</field-validator>
+	</field>
+	<field name="weight">
+		<field-validator type="int">
+			<message>必须输入权重</message>
+		</field-validator>
+		<field-validator type="regex">
+			<param name="expression"><![CDATA[([0-9]{2,4})]]></param>
+			<message>您输入的权重只能是数字,且长度在2到4个汉字以内!</message>
+		</field-validator>
+	</field>
+
+</validators>

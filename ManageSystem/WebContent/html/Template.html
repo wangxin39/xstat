@@ -1,0 +1,649 @@
+<html>
+<head>
+<title>模板变量</title>
+<style type="text/css">
+<!--
+.style1 {color: #FF9900}
+-->
+</style>
+</head>
+
+<body>
+<div class="cright">
+  <div class="title font16h">客户管理</div>
+  <div class="container">	
+<h1>模板变量类型定义信息</h1>
+<hr>
+<table width="100%" border="0">
+<tr>
+<td>
+    <div id="index">
+    <table width="100%" border="0">
+    <tr>
+    <td>模板名称</td>
+    <td>模板类型</td>
+    <td>类型注释</td>
+    </tr>
+    <tr>
+    <td><h3> index.jrxml </h3></td>
+    <td>1</td>
+    <td>首页模板</td>
+    </tr>
+    </table>
+    <table width="100%" border="1">
+    <tr>
+    <td bgcolor="#0033FF"><span class="style1">编号</span></td>
+    <td bgcolor="#0033FF"><span class="style1">变量名称</span></td>
+    <td bgcolor="#0033FF"><span class="style1">中文注释</span></td>
+    <td bgcolor="#0033FF"><span class="style1">可为空</span></td>
+    </tr>
+    <tr>
+    <td>1</td>
+    <td>projectTile</td>
+    <td>&nbsp;</td>
+    <td>否</td>
+    </tr>
+    <tr>
+    <td>2</td>
+    <td>quarterTitle</td>
+    <td>&nbsp;</td>
+    <td>否</td>
+    </tr>
+    <tr>
+    <td>3</td>
+    <td>reportTitle</td>
+    <td>&nbsp;</td>
+    <td>否</td>
+    </tr>
+    <tr>
+    <td>4</td>
+    <td>backImage</td>
+    <td>背景图片</td>
+    <td>否</td>
+    </tr>  
+    </table>
+    </div>
+</td>
+<td valign="top">
+<div id="content">
+    <table width="100%" border="0">
+    <tr>
+    <td>模板名称</td>
+    <td>模板类型</td>
+    <td>类型注释</td>
+    </tr>
+    <tr>
+    <td><h3> content.jrxml </h3></td>
+    <td>2</td>
+    <td>内容模板</td>
+    </tr>
+    </table>
+
+<table width="100%" border="1">
+<tr>
+<td width="32" bgcolor="#0033FF"><span class="style1">编号</span></td>
+<td width="109" bgcolor="#0033FF"><span class="style1">变量名称</span></td>
+<td width="65" bgcolor="#0033FF"><span class="style1">中文注释</span></td>
+<td width="53" bgcolor="#0033FF"><span class="style1">可为空</span></td>
+</tr>
+<tr>
+<td>2</td>
+<td>title</td>
+<td>标题</td>
+<td>否</td>
+</tr>
+<tr>
+<td>3</td>
+<td>content</td>
+<td>内容</td>
+<td>否</td>
+</tr>
+<tr>
+<td>4</td>
+<td>backImage</td>
+<td>背景图片</td>
+<td>否</td>
+</table>
+</div>
+</td>
+<td>
+<div id="chart">
+    <table width="100%" border="0">
+    <tr>
+    <td>模板名称</td>
+    <td>模板类型</td>
+    <td>类型注释</td>
+    </tr>
+    <tr>
+    <td><h3> chart.jrxml </h3></td>
+    <td>3</td>
+    <td>图文模板</td>
+    </tr>
+    </table>
+<table width="100%" border="1">
+<tr>
+<td bgcolor="#0033FF"><span class="style1">编号</span></td>
+<td bgcolor="#0033FF"><span class="style1">变量名称</span></td>
+<td bgcolor="#0033FF"><span class="style1">中文注释</span></td>
+<td bgcolor="#0033FF"><span class="style1">可为空</span></td>
+</tr>
+<tr>
+<td>1</td>
+<td>title</td>
+<td>标题</td>
+<td>否</td>
+</tr>
+<tr>
+<td>2</td>
+<td>content</td>
+<td>内容</td>
+<td>否</td>
+</tr>
+<tr>
+<td>3</td>
+<td>chartImage</td>
+<td>统计图</td>
+<td>是</td>
+</tr>
+<tr>
+<td>4</td>
+<td>backImage</td>
+<td>背景图片</td>
+<td>否</td>
+</table>
+</div>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<div id="part">
+    <table width="100%" border="0">
+    <tr>
+    <td>模板名称</td>
+    <td>模板类型</td>
+    <td>类型注释</td>
+    </tr>
+    <tr>
+    <td><h3> part.jrxml </h3></td>
+    <td>4</td>
+    <td>部分模板</td>
+    </tr>
+    </table>
+<table width="100%" border="1">
+<tr>
+<td bgcolor="#0033FF"><span class="style1">编号</span></td>
+<td bgcolor="#0033FF"><span class="style1">变量名称</span></td>
+<td bgcolor="#0033FF"><span class="style1">中文注释</span></td>
+<td bgcolor="#0033FF"><span class="style1">可为空</span></td>
+</tr>
+<tr>
+<td>1</td>
+<td>title</td>
+<td>标题</td>
+<td>否</td>
+</tr>
+<tr>
+<td>2</td>
+<td>h1</td>
+<td>&nbsp;</td>
+<td>否</td>
+</tr>
+<tr>
+<td>3</td>
+<td>v1</td>
+<td>&nbsp;</td>
+<td>否</td>
+</tr>
+<tr>
+<td>4</td>
+<td>h2</td>
+<td>&nbsp;</td>
+<td>否</td>
+</tr>
+<tr>
+<td>5</td>
+<td>v2</td>
+<td>&nbsp;</td>
+<td>否</td>
+</tr>
+<tr>
+<td>6</td>
+<td>h3</td>
+<td>&nbsp;</td>
+<td>否</td>
+</tr>
+<tr>
+<td>7</td>
+<td>v3</td>
+<td>&nbsp;</td>
+<td>否</td>
+</tr>
+<tr>
+<td>8</td>
+<td>backImage</td>
+<td>背景图片</td>
+<td>否</td>
+</table>
+</div>
+</td>
+<td>
+<div id="evaluation">
+    <table width="100%" border="0">
+    <tr>
+    <td>模板名称</td>
+    <td>模板类型</td>
+    <td>类型注释</td>
+    </tr>
+    <tr>
+    <td><h3> evaluation.jrxml </h3></td>
+    <td>5</td>
+    <td>评估模板</td>
+    </tr>
+    </table>
+<table width="100%" border="1">
+<tr>
+<td bgcolor="#0033FF"><span class="style1">编号</span></td>
+<td bgcolor="#0033FF"><span class="style1">变量名称</span></td>
+<td bgcolor="#0033FF"><span class="style1">中文注释</span></td>
+<td bgcolor="#0033FF"><span class="style1">可为空</span></td>
+</tr>
+<tr>
+<td>1</td>
+<td>title</td>
+<td>标题</td>
+<td>否</td>
+</tr>
+<tr>
+<td>2</td>
+<td>informantName</td>
+<td>&nbsp;</td>
+<td>否</td>
+</tr>
+<tr>
+<td>3</td>
+<td>informantTitle</td>
+<td>&nbsp;</td>
+<td>否</td>
+</tr>
+<tr>
+<td>4</td>
+<td>addressName</td>
+<td>&nbsp;</td>
+<td>否</td>
+</tr>
+<tr>
+<td>5</td>
+<td>address</td>
+<td>&nbsp;</td>
+<td>否</td>
+</tr>
+<tr>
+<td>6</td>
+<td>country</td>
+<td>&nbsp;</td>
+<td>否</td>
+</tr>
+<tr>
+<td>7</td>
+<td>roundName1</td>
+<td>&nbsp;</td>
+<td>否</td>
+</tr>
+<tr>
+<td>8</td>
+<td>roundName2</td>
+<td>&nbsp;</td>
+<td>否</td>
+</tr>
+<tr>
+<td>9</td>
+<td>checkDateName</td>
+<td>&nbsp;</td>
+<td>否</td>
+</tr>
+<tr>
+<td>10</td>
+<td>checkDateRound1</td>
+<td>&nbsp;</td>
+<td>否</td>
+</tr>
+<tr>
+<td>11</td>
+<td>checkDateRound2</td>
+<td>&nbsp;</td>
+<td>否</td>
+</tr>
+<tr>
+<td>12</td>
+<td>timeName</td>
+<td>&nbsp;</td>
+<td>否</td>
+</tr>
+<tr>
+<td>13</td>
+<td>timeRound1</td>
+<td>&nbsp;</td>
+<td>否</td>
+</tr>
+<tr>
+<td>14</td>
+<td>timeRound2</td>
+<td>&nbsp;</td>
+<td>否</td>
+</tr>
+<tr>
+<td>15</td>
+<td>saleName</td>
+<td>&nbsp;</td>
+<td>否</td>
+</tr>
+<tr>
+<td>16</td>
+<td>saleRound1</td>
+<td>&nbsp;</td>
+<td>否</td>
+</tr>
+<tr>
+<td>17</td>
+<td>saleRound2</td>
+<td>&nbsp;</td>
+<td>否</td>
+</tr>
+<tr>
+<td>18</td>
+<td>carTypeName</td>
+<td>&nbsp;</td>
+<td>否</td>
+</tr>
+<tr>
+<td>19</td>
+<td>carTypeRound1</td>
+<td>&nbsp;</td>
+<td>否</td>
+</tr>
+<tr>
+<td>20</td>
+<td>carTypeRound2</td>
+<td>&nbsp;</td>
+<td>否</td>
+</tr>
+<tr>
+<td>21</td>
+<td>headerName</td>
+<td>&nbsp;</td>
+<td>否</td>
+</tr>
+<tr>
+<td>22</td>
+<td>markName</td>
+<td>&nbsp;</td>
+<td>否</td>
+</tr>
+<tr>
+<td>23</td>
+<td>minMarkName</td>
+<td>&nbsp;</td>
+<td>否</td>
+</tr>
+<tr>
+<td>24</td>
+<td>passOrFailName</td>
+<td>&nbsp;</td>
+<td>否</td>
+</tr>
+<tr>
+<td>25</td>
+<td>h1</td>
+<td>&nbsp;</td>
+<td>否</td>
+</tr>
+<tr>
+<td>26</td>
+<td>v1</td>
+<td>&nbsp;</td>
+<td>否</td>
+</tr>
+<tr>
+<td>27</td>
+<td>h2</td>
+<td>&nbsp;</td>
+<td>否</td>
+</tr>
+<tr>
+<td>28</td>
+<td>v2</td>
+<td>&nbsp;</td>
+<td>否</td>
+</tr>
+<tr>
+<td>29</td>
+<td>h2</td>
+<td>&nbsp;</td>
+<td>否</td>
+</tr>
+<tr>
+<td>30</td>
+<td>v3</td>
+<td>&nbsp;</td>
+<td>否</td>
+</tr>
+<tr>
+<td>31</td>
+<td>part1</td>
+<td>&nbsp;</td>
+<td>否</td>
+</tr>
+<tr>
+<td>32</td>
+<td>part1v1</td>
+<td>&nbsp;</td>
+<td>否</td>
+</tr>
+<tr>
+<td>33</td>
+<td>part1v2</td>
+<td>&nbsp;</td>
+<td>否</td>
+</tr>
+<tr>
+<td>34</td>
+<td>part1v3</td>
+<td>&nbsp;</td>
+<td>否</td>
+</tr>
+<tr>
+<td>35</td>
+<td>part1v4</td>
+<td>&nbsp;</td>
+<td>否</td>
+</tr>
+<tr>
+<td>36</td>
+<td>part2</td>
+<td>&nbsp;</td>
+<td>否</td>
+</tr>
+<tr>
+<td>37</td>
+<td>part2v1</td>
+<td>&nbsp;</td>
+<td>否</td>
+</tr>
+<tr>
+<td>38</td>
+<td>part2v2</td>
+<td>&nbsp;</td>
+<td>否</td>
+</tr>
+<tr>
+<td>39</td>
+<td>part2v3</td>
+<td>&nbsp;</td>
+<td>否</td>
+</tr>
+<tr>
+<td>40</td>
+<td>part2v4</td>
+<td>&nbsp;</td>
+<td>否</td>
+</tr>
+<tr>
+<td>41</td>
+<td>part3</td>
+<td>&nbsp;</td>
+<td>否</td>
+</tr>
+<tr>
+<td>42</td>
+<td>part3v1</td>
+<td>&nbsp;</td>
+<td>否</td>
+</tr>
+<tr>
+<td>43</td>
+<td>part3v2</td>
+<td>&nbsp;</td>
+<td>否</td>
+</tr>
+<tr>
+<td>44</td>
+<td>part3v3</td>
+<td>&nbsp;</td>
+<td>否</td>
+</tr>
+<tr>
+<td>45</td>
+<td>part3v4</td>
+<td>&nbsp;</td>
+<td>否</td>
+</tr>
+<tr>
+<td>46</td>
+<td>part4</td>
+<td>&nbsp;</td>
+<td>否</td>
+</tr>
+<tr>
+<td>47</td>
+<td>part4v1</td>
+<td>&nbsp;</td>
+<td>否</td>
+</tr>
+<tr>
+<td>48</td>
+<td>part4v2</td>
+<td>&nbsp;</td>
+<td>否</td>
+</tr>
+<tr>
+<td>49</td>
+<td>part4v3</td>
+<td>&nbsp;</td>
+<td>否</td>
+</tr>
+<tr>
+<td>50</td>
+<td>part4v4</td>
+<td>&nbsp;</td>
+<td>否</td>
+</tr>
+<tr>
+<td>51</td>
+<td>part5</td>
+<td>&nbsp;</td>
+<td>否</td>
+</tr>
+<tr>
+<td>52</td>
+<td>part5v1</td>
+<td>&nbsp;</td>
+<td>否</td>
+</tr>
+<tr>
+<td>53</td>
+<td>part5v2</td>
+<td>&nbsp;</td>
+<td>否</td>
+</tr>
+<tr>
+<td>54</td>
+<td>part5v3</td>
+<td>&nbsp;</td>
+<td>否</td>
+</tr>
+<tr>
+<td>55</td>
+<td>part5v4</td>
+<td>&nbsp;</td>
+<td>否</td>
+</tr>
+<tr>
+<td>56</td>
+<td>part6</td>
+<td>&nbsp;</td>
+<td>否</td>
+</tr>
+<tr>
+<td>57</td>
+<td>part6v1</td>
+<td>&nbsp;</td>
+<td>否</td>
+</tr>
+<tr>
+<td>58</td>
+<td>part6v2</td>
+<td>&nbsp;</td>
+<td>否</td>
+</tr>
+<tr>
+<td>59</td>
+<td>part6v3</td>
+<td>&nbsp;</td>
+<td>否</td>
+</tr>
+<tr>
+<td>60</td>
+<td>part6v4</td>
+<td>&nbsp;</td>
+<td>否</td>
+</tr>
+<tr>
+<td>61</td>
+<td>commentsName</td>
+<td>&nbsp;</td>
+<td>否</td>
+</tr>
+<tr>
+<td>62</td>
+<td>comments</td>
+<td>&nbsp;</td>
+<td>否</td>
+</tr>
+<tr>
+<td>63</td>
+<td>managerName</td>
+<td>&nbsp;</td>
+<td>否</td>
+</tr>
+<tr>
+<td>64</td>
+<td>companyName</td>
+<td>&nbsp;</td>
+<td>否</td>
+</tr>
+<tr>
+<td>65</td>
+<td>backImage</td>
+<td>背景图片</td>
+<td>否</td>
+</table>
+</div>
+</td>
+<td>&nbsp;</td>
+</tr>
+</table>
+<hr>
+</div>
+</div>
+</body>
+</html>

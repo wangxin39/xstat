@@ -1,0 +1,8 @@
+org.xsaas.xstat.business
+org.xsaas.xstat.business.service
+org.xsaas.xstat.conf
+org.xsaas.xstat.dao
+org.xsaas.xstat.dao.hibernate
+org.xsaas.xstat.po
+org.xsaas.xstat.util
+org.xsaas.xstat.utils.page

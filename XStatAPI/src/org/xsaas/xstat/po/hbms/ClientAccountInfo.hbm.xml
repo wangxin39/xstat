@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+		"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="org.xsaas.xstat.po">
+	<class name="ClientAccountInfo" table="client_account_info">
+		<id column="accountid" name="accountID" type="java.lang.Long">
+			<generator class="identity"/>
+		</id>
+		<property column="clientid" name="clientID" type="java.lang.Long"></property>
+		<property column="type" name="type" type="java.lang.Integer"></property>				
+		<property column="informantid" name="informantID" type="java.lang.Long"></property>
+		<property column="clientname" name="clientName" type="java.lang.String"></property>				
+		<property column="loginName" name="loginName" type="java.lang.String"></property>	
+		<property column="password" name="passWord" type="java.lang.String"></property>
+		<property column="country" name="country" type="java.lang.String"></property>					
+		<property column="province" name="province" type="java.lang.Integer"></property>				
+		<property column="cityID" name="cityID" type="java.lang.Long"></property>				
+		<property column="telephone" name="telephone" type="java.lang.String"></property>	
+		<property column="mobile" name="mobile" type="java.lang.String"></property>							
+		<property column="lastLogin" name="lastLogin" type="java.sql.Timestamp"></property>
+		<property column="lastip" name="lastIP" type="java.lang.String"></property>	
+		<property column="fatherID" name="fatherID" type="java.lang.Long"></property>		
+		<property column="status" name="status" type="java.lang.Integer"></property>																											
+	</class>
+</hibernate-mapping>

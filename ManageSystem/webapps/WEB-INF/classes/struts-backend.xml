@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="manage" namespace="/manage" extends="struts-default,json-default">
+   		<global-results>
+   			<result name="exception">/WEB-INF/pages/error.jsp</result>
+   			<result name="error">/WEB-INF/pages/error.jsp</result>
+   			<result name="login" type="redirect">../admin</result>
+   		</global-results>   		
+   		<global-exception-mappings>
+   			<exception-mapping result="exception" exception="java.lang.Exception"/>
+   		</global-exception-mappings>
+
+   		<!-- 通用 list*映射 -->
+		<action name="list*" class="org.xsaas.xstat.web.action.manage.list.List{1}Action">		
+		  <result name="input">/WEB-INF/pages/manage/{1}_list.jsp</result>
+		  <result name="success">/WEB-INF/pages/manage/{1}_list.jsp</result>
+		</action>
+		
+		<!-- 通用分页异步获取JSON数据  -->
+		<action name="ajax*" class="org.xsaas.xstat.web.action.manage.list.List{1}Action">
+			<result name="success" type="json"/>
+		</action>
+		  		
+		<action name="json*" class="org.xsaas.xstat.web.action.manage.ajax.Json{1}Action">
+			<result name="success" type="json"/>
+		</action>
+
+
+		<!-- 通用 add*Input 映射 -->
+		<action name="add*Inputs" method="input" class="org.xsaas.xstat.web.action.manage.add.Add{1}Actions">	
+	      <interceptor-ref name="paramsPrepareParamsStack" > 
+	       <param name="validation.excludeMethods">*</param>   
+	       <param name="validation.includeMethods">execute</param>
+	      </interceptor-ref>
+			<result name="input">/WEB-INF/pages/manage/{1}_adds.jsp</result>
+			<result name="success">/WEB-INF/pages/manage/{1}_adds.jsp</result>
+		</action> 
+		
+		<!-- 通用 add*Process 映射 -->
+		<action name="add*Process"  class="org.xsaas.xstat.web.action.manage.add.Add{1}Actions">             
+	      <interceptor-ref name="paramsPrepareParamsStack" > 
+	       <param name="validation.excludeMethods">*</param>   
+	       <param name="validation.includeMethods">execute</param>
+	      </interceptor-ref>
+			<param name="savePath">/uploads</param>
+			<result name="input">/WEB-INF/pages/manage/{1}_adds.jsp</result>
+			<result name="success">/WEB-INF/pages/manage/{1}_add_success.jsp</result>
+		</action> 	
+
+		<!-- 通用 edit*Input 映射 -->
+		<action name="edit*Input" method="edit" class="org.xsaas.xstat.web.action.manage.edit.Edit{1}Action">
+	      <interceptor-ref name="paramsPrepareParamsStack" > 
+	       <param name="validation.excludeMethods">*</param>   
+	       <param name="validation.includeMethods">execute</param>
+	      </interceptor-ref>
+			<result name="input">/WEB-INF/pages/manage/{1}_edit.jsp</result>
+			<result name="success">/WEB-INF/pages/manage/{1}_edit.jsp</result>
+		</action>
+
+		<!-- 通用 edit*Process 映射 -->
+		<action name="edit*Process" class="org.xsaas.xstat.web.action.manage.edit.Edit{1}Action">            	
+	      <interceptor-ref name="paramsPrepareParamsStack" > 
+	       <param name="validation.excludeMethods">*</param>   
+	       <param name="validation.includeMethods">execute</param>
+	      </interceptor-ref>
+			<param name="savePath">/uploads</param>
+			<result name="input">/WEB-INF/pages/manage/{1}_edit.jsp</result>
+			<result name="success">/WEB-INF/pages/manage/{1}_edit_success.jsp</result>
+		</action>
+
+		<!-- 通用 detail*Store 映射 -->
+		<action name="detail*Store" method="detail" class="org.xsaas.xstat.web.action.manage.list.List{1}Action">
+			<result name="success">/WEB-INF/pages/manage/{1}_detail_success.jsp</result>
+		</action>
+		
+		<!-- 通用delete*Process 映射 -->
+		<action name="delete*Process" class="org.xsaas.xstat.web.action.manage.delete.Delete{1}Action">
+			<result name="success" type="redirect-action">list{1}</result>
+		</action>
+
+		<!-- 通用 delete*Selected 映射 -->
+		<action name="delete*Selected" method="selected{1}" class="org.xsaas.xstat.web.action.manage.delete.Delete{1}Action">
+			<result name="success">/WEB-INF/pages/manage/{1}_delete.jsp</result>			
+		</action>
+		
+		<action name="update*Process" class="org.xsaas.xstat.web.action.manage.update.Update{1}Action">
+			<result name="success">/WEB-INF/pages/manage/{1}_update_success.jsp</result>
+		</action>
+		<action name="recoverRecycled" method="recover" class="org.xsaas.xstat.web.action.manage.list.ListRecycledAction">
+			<result name="success" type="redirect-action">listRecycled.do</result>
+		</action>
+	</package>										
+    
+</struts>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="backend" extends="struts-default">
+   		<global-results>
+   			<result name="exception">/WEB-INF/jsp/error.jsp</result>
+   			<result name="login" type="redirect">/admin</result>
+   		</global-results>
+   		<global-exception-mappings>
+   			<exception-mapping result="exception" exception="java.lang.Exception"/>
+   		</global-exception-mappings>
+	
+   		<!-- 通用 list*映射 -->
+		<action name="list*" class="org.xsaas.xstat.web.action.backend.list.List{1}Action">
+  		  <result name="input">/WEB-INF/jsp/{1}_list.jsp</result>
+		  <result name="success">/WEB-INF/jsp/{1}_list.jsp</result>
+		</action>
+		
+   		
+   		<!-- 通用 detail*Process 映射 -->
+		<action name="detail*Process" method="detail" class="org.xsaas.xstat.web.action.backend.list.List{1}Action">
+			<result>/WEB-INF/jsp/{1}_detail.jsp</result>
+		</action> 
+   		
+		<!-- 通用 edit*Input 映射 -->
+		<action name="edit*Input" method="edit" class="org.xsaas.xstat.web.action.backend.edit.Edit{1}Action">
+	      <interceptor-ref name="paramsPrepareParamsStack" > 
+	       <param name="validation.excludeMethods">*</param>   
+	       <param name="validation.includeMethods">execute</param>
+	      </interceptor-ref>
+			<result name="input">/WEB-INF/jsp/{1}_edit.jsp</result>
+			<result name="success">/WEB-INF/jsp/{1}_edit.jsp</result>
+		</action>
+
+		<!-- 通用 edit*Process 映射 -->
+		<action name="edit*Process" class="org.xsaas.xstat.web.action.backend.edit.Edit{1}Action">            
+			<interceptor-ref name="paramsPrepareParamsStack" > 
+			 <param name="validation.excludeMethods">*</param>   
+			 <param name="validation.includeMethods">execute</param>
+			</interceptor-ref>
+			<param name="savePath">/uploads</param>
+			<result name="input">/WEB-INF/jsp/{1}_edit.jsp</result>
+			<result name="success">/WEB-INF/jsp/{1}_edit_success.jsp</result>
+		</action>
+		
+		<!-- 通用delete*Process 映射 -->
+		<action name="delete*Process" class="org.xsaas.xstat.web.action.backend.delete.Delete{1}Action">
+			<result name="success" type="redirect">list{1}.do</result>
+		</action>
+
+		<!-- 通用 delete*Selected 映射 -->
+		<action name="delete*Selected" class="org.xsaas.xstat.web.action.backend.delete.Delete{1}Action">
+			<result name="success">/WEB-INF/jsp/{1}_delete.jsp</result>			
+		</action>
+
+		<!-- 通用 add*Input 映射 -->
+		<action name="add*Inputs" method="input" class="org.xsaas.xstat.web.action.backend.add.Add{1}Action">
+			<interceptor-ref name="paramsPrepareParamsStack" > 
+			 <param name="validation.excludeMethods">*</param>   
+			 <param name="validation.includeMethods">execute</param>
+			</interceptor-ref>
+			<result name="input">/WEB-INF/jsp/{1}_adds.jsp</result>
+			<result name="success">/WEB-INF/jsp/{1}_adds.jsp</result>
+		</action> 
+	
+		<!-- 通用 add*Process 映射 -->
+		<action name="add*Process" class="org.xsaas.xstat.web.action.backend.add.Add{1}Actions">             
+			<interceptor-ref name="paramsPrepareParamsStack" > 
+			 <param name="validation.excludeMethods">*</param>   
+			 <param name="validation.includeMethods">execute</param>
+			</interceptor-ref>
+			<param name="savePath">/uploads</param>
+			<result name="input">/WEB-INF/jsp/{1}_adds.jsp</result>
+			<result name="success">/WEB-INF/jsp/{1}_add_success.jsp</result>
+		</action> 
+		
+		<!-- 通用 add*Input 映射 -->
+		<action name="auth*" method="regStatus" class="org.xsaas.xstat.web.action.backend.add.Add{1}Actions">
+			<result name="success">/admin/index.jsp</result>
+		</action>
+		
+		<!-- 通用 add*Input 映射
+		<action name="reg" class="org.xsaas.xstat.web.action.backend.RegAction">
+			<result name="success">/WEB-INF/jsp/Reg_list.jsp</result>
+		</action>  -->
+	</package>	
+    
+</struts>

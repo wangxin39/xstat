@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="gb2312"?>
+<!-- spring 配置文件的文件头，包含dtd等信息 -->
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<!-- spring 配置文件的根元素 -->
+<beans>
+	<!-- 配置MailSender bean，使用其实现类 JavaMailSenderImpl -->
+	<bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
+		<!-- 设置邮件的SMTP服务器地址 -->
+		<property name="host">
+			<value>smtp.sina.com.cn</value>
+		</property>
+		<!-- 设置认证时所需的用户名 -->
+		<property name="username">
+			<value>wsitcxy@sina.com</value>
+		</property>
+		<!-- 设置认证时所需的密码 -->
+		<property name="password">
+			<value>liuyaoyang</value>
+		</property>
+		<!-- 设置发送邮件的相关属性 -->
+		<property name="javaMailProperties">
+			<props>
+				<!-- 是否需要认证 -->
+				<prop key="mail.smtp.auth">true</prop>
+				<!-- 设置超时时长 -->
+				<prop key="mail.smtp.timeout">25000</prop>
+			</props>
+		</property>
+		
+		
+	</bean>
+</beans>

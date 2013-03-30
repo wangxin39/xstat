@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="GBK"?>
+<!DOCTYPE validators PUBLIC "-//OpenSymphony Group//XWork Validator 1.0.2//EN"
+	"http://www.opensymphony.com/xwork/xwork-validator-1.0.2.dtd">
+
+<validators>
+	<field name="question">
+		<field-validator type="regex">
+			<param name="expression"><![CDATA[([\u4e00-\u9fa5\sA-Za-z\s0-9\,，\{\}『』\\r\\n【】\[\]《》\<\>。\.\?？\(\)/\（）\"”“、'‘：:~～％%&※！!_\-－·]{2,255})]]></param>
+			<message>您输入的中文问题有非法字符或超长!</message>
+		</field-validator>
+	</field>
+	<field name="englishQuestion">		
+		<field-validator type="regex">
+			<param name="expression"><![CDATA[([a-zA-Z\sA-Za-z\s0-9,，\{\}『』【】\[\]\r\n《》<>。\.\?？\/\(\)（）\"\”“、'‘：:~～％%&※！!_\-－·]{2,255})]]></param>
+			<message>您输入的英文问题只能是字母和数字，且长度必须在4到255之间!</message>
+		</field-validator>
+	</field>
+	<field name="zhExplain">
+		<field-validator type="regex">
+			<param name="expression"><![CDATA[([\u4e00-\u9fa5\sA-Z\s0-9\,，\{\}『』\\r\\n【】\[\]《》\<\>。\.\?？\(\)/\（）\"”“、'‘：:~～％%&※！!_\-－·]{2,255})]]></param>
+			<message>您输入的中文说明长度在4到255个字符以内!</message>
+		</field-validator>
+	</field>
+	<field name="englishExplain">
+		<field-validator type="regex">
+			<param name="expression"><![CDATA[([a-zA-Z\s0-9,，\{\}『』【】\[\]\r\n《》<>。\.\?？\/\(\)（）\"\”“、'‘：:~～％%&※！!_\-－·]{2,255})]]></param>
+			<message>您输入的英文说明只能是字母和数字，且长度必须在4到255之间!</message>
+		</field-validator>
+	</field>
+</validators>

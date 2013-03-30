@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+		"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="org.xsaas.xstat.po">
+	<class name="PartInfo" table="part_info">
+		<id column="partid" name="partID" type="java.lang.Long">
+			<generator class="identity"/>
+		</id>
+		<property column="inquisitionid" name="inquisitionID" type="java.lang.Long"></property>
+		<property column="shownum" name="showNum" type="java.lang.String"></property>
+		<property column="showorder" name="showOrder" type="java.lang.Integer"></property>
+		<property column="name" name="name" type="java.lang.String"></property>
+		<property column="englishname" name="englishName" type="java.lang.String"></property>	
+		<property column="status" name="status" type="java.lang.Integer"></property>												
+	</class>
+</hibernate-mapping>

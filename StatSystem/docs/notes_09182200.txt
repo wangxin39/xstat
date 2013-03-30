@@ -1,0 +1,127 @@
+
+
+稳定的计算
+
+调查问卷
+
+权重统计
+
+各种图表数据统计分析
+
+生成各种报表
+
+
+利用ProcessBuilder，防止程序跑飞
+
+重启子进程
+线程有两类：用户线程和守护线程，用户线程完成有用工作的线程，守护线程提供
+Thread类提供了setDaemon函数，
+
+class TestThread extends Thread {
+	void run()｛处理内容．．．．｝
+}
+
+class TestRunnable implements Runnable {
+	void run()｛处理内容．．．．｝
+}
+
+public class StartRunnable {
+	public static void main(String[] args){
+		new Thread(new TestRunnable()).start();
+	}
+}
+
+//取得当前线程，并判断当前线程是否被中断的
+if(Thread.currentThread().isInterrupted()) {
+	处理内容.....
+}
+
+// 中断线程 new TestThread().iterrupt();
+
+线程状态
+
+New
+Runnable
+Blocked
+Dead
+
+新生状态
+new Thread();
+
+可运行线程
+new Thread().start();
+
+isAlive
+
+join
+
+setDaemon(boolean on); true 设置为守护线程
+
+
+public int activeCount() 方法：返回此线程组中活动线程的估计数
+
+中断此线程组中的所有线程。
+
+new Thread().getThreadGroup() 方法：
+返回该线程所属的线程组。如果该线程已经终止（停止运行），该方法则返回null
+
+ReentrantLock
+	lock
+	unlock
+	
+Condition c = new ReentrantLock().newCondition();
+c.await(); //造成当前线程在接到信号或被中断之前一直处于等待状态
+c.signalAll(); // 唤醒所有等待线程。
+
+
+精灵线程/守护线程
+守护线程是一类特殊的线程，它和普通线程的区别在于它并不是应用程序的核心部分，当一个应用程序的所有非守护线程终止运行时，
+即使仍然有守护线程在运行，应用程序也将终止，反之，只要有一个非守护线程在运行，应用程序就不会终止。守护线程一般被用于
+在后台为其它线程提供服务。
+
+可以通过调用方法 isDaemon() 来判断一个线程是否是守护线程，也可以调用方法 setDaemon() 来将一个线程设为守护线程。
+
+
+
+线程组是一个 Java 特有的概念，在 Java 中，线程组是类ThreadGroup 的对象，每个线程都隶属于唯一一个线程组，这个线程组在线程创建时指定并在线程的整个生命期内都不能更改。
+可以通过调用包含 ThreadGroup 类型参数的 Thread 类构造函数来指定线程属的线程组，若没有指定，则线程缺省地隶属于名为 system 的系统线程组。比如：
+ThreadGroup group = new ThreadGroup(“workgroup”);
+Thread t = new Thread(group, task);
+t.start();
+在 Java 中，除了预建的系统线程组外，所有线程组都必须显式创建。在 Java 中，除系统线程组外的每个线程组又隶属于另一个线程组，你可以在创建线程组时指定其所隶属的线程组，若没有指定，则缺省地隶属于系统线程组。这样，所有线程组组成了一棵以系统线程组为根的树。
+Java 线程组的主要作用是对一个线程组中的所有线程同时进行操作，比如我们可以通过调用线程组的相应方法来设置其中所有线程的优先级，也可以启动或阻塞其中的所有线程。
+Java 的线程组机制的另一个重要作用是线程安全。线程组机制允许我们通过分组来区分有不同安全特性的线程，对不同组的线程进行不同的处理，还可以通过线程组的分层结构来支持不对等安全措施的采用。
+Java 的 ThreadGroup 类提供了大量的方法来方便我们对线程组树中的每一个线程组以及线程组中的每一个线程进行操作，具体可以参考JDK文档。
+
+读写锁
+读写锁主要用于对共享数据的访问，读锁可以被读线程同时持有，而写锁是排他的。也就是说，多个读线程可以同时访问数据，同一时间只能有一个写线程访问数据，写锁对读锁也是排斥的，当写线程工作时，读线程需要等待。理论上读写锁可以提高并发性能，但实际应用过程中需要考虑读写操作的频繁性，读写锁本身的开销等。一般如果读操作比写操作频繁，读写锁应该比互斥的锁提高性能。
+
+
+class CachedData {   
+	Object data;   
+	volatile boolean cacheValid;   
+	ReentrantReadWriteLock rwl = new ReentrantReadWriteLock();    
+	void processCachedData() {     
+		rwl.readLock().lock();     
+		if (!cacheValid) {        
+			// 升级读锁到写锁        
+			rwl.readLock().unlock();   
+			// 必须先释放读锁来获得写锁        
+			rwl.writeLock().lock();        
+			if (!cacheValid) { 
+				// recheck          data = ...          
+				cacheValid = true;        
+			}        
+			// 锁降级        
+			rwl.readLock().lock(); 
+			// 重新获取读锁，无须先释放写锁        
+			rwl.writeLock().unlock(); 
+			// 释放写锁，仍然获取读锁     
+		}      
+		use(data);     
+		rwl.readLock().unlock();
+		//释放读锁   
+	}
+ }
+
+

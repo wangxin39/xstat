@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+		"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="org.xsaas.xstat.po">
+	<class name="StatChartInfo" table="stat_chart_info">
+		<id column="chartID" name="chartID" type="java.lang.Long">
+			<generator class="identity"/>
+		</id>
+		<property column="year" name="year" type="java.lang.Integer"></property>
+		<property column="month" name="month" type="java.lang.Integer"></property>
+		<property column="day" name="day" type="java.lang.Integer"></property>
+		<property column="checktime" name="checkTime" type="java.sql.Timestamp"></property>
+		<property column="clientid" name="clientID" type="java.lang.Long"></property>
+		<property column="projectid" name="projectID" type="java.lang.Long"></property>
+		<property column="issueid" name="issueID" type="java.lang.Long"></property>
+		<property column="smgkid" name="smgkID" type="java.lang.Long"></property>
+		<property column="informantid" name="informantID" type="java.lang.Long"></property>
+		<property column="type" name="type" type="java.lang.Integer"></property>
+		<property column="fileName" name="fileName" type="java.lang.String"></property>
+		<property column="savePath" name="savePath" type="java.lang.String"></property>
+	</class>
+</hibernate-mapping>

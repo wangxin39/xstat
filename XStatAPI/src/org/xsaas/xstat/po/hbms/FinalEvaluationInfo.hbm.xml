@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+		"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="org.xsaas.xstat.po">
+	<class name="FinalEvaluationInfo" table="final_evaluation_info">
+		<id column="FinalEvaluationID" name="finalEvaluationID" type="java.lang.Long">
+			<generator class="identity"/>
+		</id>
+		<property column="year" name="year" type="java.lang.Integer"></property>
+		<property column="month" name="month" type="java.lang.Integer"></property>
+		<property column="day" name="day" type="java.lang.Integer"></property>
+		<property column="checktime" name="checkTime" type="java.sql.Timestamp"></property>
+		<property column="clientid" name="clientID" type="java.lang.Long"></property>
+		<property column="projectid" name="projectID" type="java.lang.Long"></property>
+		<property column="issueid" name="issueID" type="java.lang.Long"></property>
+		<property column="passnum" name="passNum" type="java.lang.Integer"></property>
+		<property column="failNum" name="failNum" type="java.lang.Integer"></property>		
+		<property column="informantNum" name="informantNum" type="java.lang.Integer"></property>
+		<property column="average" name="average" type="java.lang.Double"></property>
+		</class>
+</hibernate-mapping>

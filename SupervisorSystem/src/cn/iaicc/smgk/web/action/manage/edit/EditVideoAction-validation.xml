@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="GBK"?>
+<!DOCTYPE validators PUBLIC "-//OpenSymphony Group//XWork Validator 1.0.2//EN"
+	"http://www.opensymphony.com/xwork/xwork-validator-1.0.2.dtd">
+
+<validators>
+	<field name="name">
+		<field-validator type="requiredstring">
+			<param name="trim">true</param>
+			<message>必须输入名称</message>
+		</field-validator>
+		<field-validator type="regex">
+			<param name="expression"><![CDATA[([\u4e00-\u9fa5\s0-9,，。！!._\-·]{2,255})]]></param>
+			<message>您输入的名称只能是中文,且长度在2到255个汉字以内!</message>
+		</field-validator>
+	</field>
+	<field name="url">
+		<field-validator type="requiredstring">
+			<param name="trim">true</param>
+			<message>必须输入连接地址</message>
+		</field-validator>
+		<field-validator type="regex">
+			<param name="expression"><![CDATA[([a-zA-z]+://[^\s]*)]]></param>
+			<message>您输入网址不正确!格式为http://www.baidu.com</message>
+		</field-validator>
+	</field>
+	<field name="englishName">
+		
+		<field-validator type="regex">
+			<param name="expression"><![CDATA[([a-zA-Z\s0-9,，。！!._\-·]{2,255})]]></param>
+			<message>您输入的英文名称只能是字母或数字,且长度在4到25之间!</message>
+		</field-validator>
+	</field>
+</validators>

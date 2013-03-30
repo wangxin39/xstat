@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+		"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="org.xsaas.xstat.po">
+	<class name="HeaderRecordInfo" table="header_record_info">
+		<id column="headerrecordid" name="headerRecordID" type="java.lang.Long">
+			<generator class="identity"/>
+		</id>
+		<property column="planid" name="planID" type="java.lang.Long"></property>
+		<property column="issueid" name="issueID" type="java.lang.Long"></property>
+		<property column="round" name="round" type="java.lang.Integer"></property>
+		<property column="clientid" name="clientID" type="java.lang.Long"></property>
+		<property column="informantid" name="informantID" type="java.lang.Long"></property>
+		<property column="smgkid" name="smgkID" type="java.lang.Long"></property>
+		<property column="inquisitionid" name="inquisitionID" type="java.lang.Long"></property>
+		<property column="headerid" name="headerID" type="java.lang.Long"></property>
+		<property column="questionType" name="questionType" type="java.lang.Integer"></property>
+		<property column="headerSelectID" name="headerSelectID" type="java.lang.Long"></property>
+		<property column="optionRelationID" name="optionRelationID" type="java.lang.Long"></property>
+		<property column="fieldName" name="fieldName" type="java.lang.String"></property>
+		<property column="answer" name="answer" type="java.lang.String"></property>
+		<property column="enAnswer" name="enAnswer" type="java.lang.String"></property>
+		<property column="addTime" name="addTime" type="java.sql.Timestamp"></property>
+	</class>
+</hibernate-mapping>

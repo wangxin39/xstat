@@ -1,0 +1,51 @@
+<project name="XStatAPI" basedir="." default="all">
+	<property name="jar.name" value="xstat-1.0.jar"/>
+	
+	<target name="all">
+		<antcall target="jar"></antcall>
+		<antcall target="doc"></antcall>
+	</target>
+	<target name="jar">
+		<delete file="${jar.name}"></delete>		
+		<jar jarfile="${jar.name}" manifest="MANIFEST.MF">
+			<fileset dir="bin">
+				<include name="**" />
+			</fileset>
+		</jar>
+		<copy file="${jar.name}" todir="..\lib"/>
+		<copy file="${jar.name}" todir="..\console\stat\lib"/>
+	</target>
+	
+	<target name="doc">
+		 <javadoc packagenames="org.xsaas.xstat.*"
+		           sourcepath="src"
+		           excludepackagenames="org.xsaas.xstat.test.doc-files.*"
+		           defaultexcludes="yes"
+		           destdir="docs/api"
+		 		   encoding="gbk"		 		   
+		           author="true"
+		           version="true"
+		           use="true"
+				   useexternalfile="true"
+		           windowtitle="调查统计软件服务平台 API">
+			<classpath id="cpath">
+				<fileset dir="bin">
+					<include name="*.*"/>
+					<include name="**/*.*"/>
+				</fileset>
+				<fileset dir="..\lib">
+					<include name="*.*"/>
+					<include name="**/*.*"/>
+				</fileset>
+			</classpath>
+		 	<doctitle><![CDATA[<h1>调查统计软件服务平台 API</h1>]]></doctitle>
+		    <bottom><![CDATA[<i>Copyright &#169; 2008 北京艾迪智软信息技术有限责任公司. All Rights Reserved.</i><br/><i><a href="http://www.idea-soft.cn" target="_blank">http://www.idea-soft.cn</a></i> <i><a href="http://www.iaicc.cn" target="_blank">http://www.iaicc.cn</a></i> <i><a href="http://www.xsaas.org" target="_blank">http://www.xsaas.org</a></i>]]></bottom>
+		    <group title="常用工具类" packages="org.xsaas.xstat.util.*"/>
+		 	<group title="业务对象类" packages="org.xsaas.xstat.po.*"/>
+	    	<group title="服务接口" packages="org.xsaas.xstat.business.*"/>
+	    	<group title="委托服务实现" packages="org.xsaas.xstat.business.service.*"/>		 	
+	    	<group title="数据库对象接口" packages="org.xsaas.xstat.dao.*"/>
+	    	<group title="数据库对象实现" packages="org.xsaas.xstat.dao.hibernate.*"/>		 	
+		 </javadoc>
+	</target>
+</project>

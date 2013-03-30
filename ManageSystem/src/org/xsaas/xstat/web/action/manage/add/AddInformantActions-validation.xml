@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="GBK"?>
+<!DOCTYPE validators PUBLIC "-//OpenSymphony Group//XWork Validator 1.0.2//EN"
+	"http://www.opensymphony.com/xwork/xwork-validator-1.0.2.dtd">
+
+<validators>
+	<field name="name">
+		<field-validator type="requiredstring">
+			<param name="trim">true</param>
+			<message>必须输入调查名称</message>
+		</field-validator>
+		<field-validator type="regex">
+			<param name="expression"><![CDATA[([\u4e00-\u9fa5\s0-9A-Za-z,，。！!\._\-·]{2,255})]]></param>
+			<message>您输入的调查名称只能是中文,且长度在2到255个汉字以内!</message>
+		</field-validator>
+	</field>
+	<field name="englishName">
+		<field-validator type="regex">
+			<param name="expression"><![CDATA[([a-zA-Z\s0-9,，。！!\._\-·]{2,255})]]></param>
+			<message>您输入的英文名称只能是字母或数字,且长度在4到25之间!</message>
+		</field-validator>
+	</field>
+	<field name="aliasName">
+		<field-validator type="requiredstring">
+			<param name="trim">true</param>
+			<message>必须输入中文别名</message>
+		</field-validator>
+		<field-validator type="regex">
+			<param name="expression"><![CDATA[([\u4e00-\u9fa5\s0-9A-Za-z,，。！!\._\-·]{2,255})]]></param>
+			<message>您输入的中文别名只能是中文,且长度在2到255个汉字以内!</message>
+		</field-validator>
+	</field>
+	<field name="englishAliasName">
+		<field-validator type="regex">
+			<param name="expression"><![CDATA[([a-zA-Z\s0-9,，。！!\._\-·]{2,255})]]></param>
+			<message>您输入的英文别名只能是字母或数字,且长度在4到25之间!</message>
+		</field-validator>
+	</field>
+	<field name="telephone">
+		<field-validator type="requiredstring">
+			<param name="trim">true</param>
+			<message>必须输入联系电话</message>
+		</field-validator>
+	</field>
+	<field name="email">
+		<field-validator type="regex">
+			<param name="expression"><![CDATA[\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*]]></param>
+			<message>请您输入一个有效的电子邮件地址!</message>
+		</field-validator>
+	</field>
+</validators>

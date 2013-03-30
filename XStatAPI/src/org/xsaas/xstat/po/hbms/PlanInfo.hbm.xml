@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+		"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="org.xsaas.xstat.po">
+	<class name="PlanInfo" table="plan_info">
+		<id column="planid" name="planID" type="java.lang.Long">
+			<generator class="identity"/>
+		</id>
+		<property column="name" name="name" type="java.lang.String"></property>	
+		<property column="issueid" name="issueID" type="java.lang.Long"></property>
+		<property column="clientid" name="clientID" type="java.lang.Long"></property>	
+		<property column="projectid" name="projectID" type="java.lang.Long"></property>	
+		<property column="informantid" name="informantID" type="java.lang.Long"></property>
+		<property column="smgkid" name="smgkID" type="java.lang.Long"></property>	
+		<property column="jobid" name="jobID" type="java.lang.String"></property>	
+		<property column="starttime" name="startTime" type="java.lang.String"></property>	
+		<property column="endtime" name="endTime" type="java.lang.String"></property>	
+		<property column="startday" name="startDay" type="java.sql.Timestamp"></property>	
+		<property column="endday" name="endDay" type="java.sql.Timestamp"></property>																												
+		<property column="round" name="round" type="java.lang.Integer"></property>
+		<property column="checkstatus" name="checkStatus" type="java.lang.Integer"></property>
+		<property column="statstatus" name="statStatus" type="java.lang.Integer"></property>
+		<property column="chartstatus" name="chartStatus" type="java.lang.Integer"></property>
+		<property column="evaluationstatus" name="evaluationStatus" type="java.lang.Integer"></property>
+		<property column="reportstatus" name="reportStatus" type="java.lang.Integer"></property>
+		<property column="status" name="status" type="java.lang.Integer"></property>
+		<property column="weightPattern" name="weightPattern" type="java.lang.Integer"></property>
+		<property column="plantype" name="planType" type="java.lang.Integer"></property>		
+	</class>
+</hibernate-mapping>

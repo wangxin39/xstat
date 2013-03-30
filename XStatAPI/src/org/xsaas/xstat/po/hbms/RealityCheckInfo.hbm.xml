@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+		"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="org.xsaas.xstat.po">
+	<class name="RealityCheckInfo" table="reality_check_info">
+		<id column="realityCheckid" name="realityCheckID" type="java.lang.Long">
+			<generator class="identity"/>
+		</id>
+		<property column="clientid" name="clientID" type="java.lang.Long"></property>
+		<property column="projectid" name="projectID" type="java.lang.Long"></property>
+		<property column="issueid" name="issueID" type="java.lang.Long"></property>
+		<property column="inquisitionid" name="inquisitionID" type="java.lang.Long"></property>				
+		<property column="thistime" name="thisTime" type="java.lang.String"></property>				
+		<property column="enthistime" name="enThisTime" type="java.lang.String"></property>	
+		<property column="sofartime" name="soFarTime" type="java.lang.String"></property>				
+		<property column="ensofartime" name="enSoFarTime" type="java.lang.String"></property>	
+		<property column="markreal" name="markReal" type="java.lang.String"></property>				
+		<property column="enmarkreal" name="enMarkReal" type="java.lang.String"></property>	
+		<property column="status" name="status" type="java.lang.Integer"></property>	
+		<property column="addtime" name="addTime" type="java.sql.Timestamp"></property>									
+	</class>
+</hibernate-mapping>

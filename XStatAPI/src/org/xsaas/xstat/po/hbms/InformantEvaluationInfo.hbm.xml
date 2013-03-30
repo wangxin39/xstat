@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+		"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="org.xsaas.xstat.po">
+	<class name="InformantEvaluationInfo" table="inquisition_evaluation_info">
+		<id column="evaluationID" name="evaluationID" type="java.lang.Long">
+			<generator class="identity"/>
+		</id>
+		<property column="year" name="year" type="java.lang.Integer"></property>
+		<property column="month" name="month" type="java.lang.Integer"></property>
+		<property column="day" name="day" type="java.lang.Integer"></property>
+		<property column="checktime" name="checkTime" type="java.sql.Timestamp"></property>
+		<property column="clientid" name="clientID" type="java.lang.Long"></property>
+		<property column="projectid" name="projectID" type="java.lang.Long"></property>
+		<property column="issueid" name="issueID" type="java.lang.Long"></property>
+		<property column="informantid" name="informantID" type="java.lang.Long"></property>
+		<property column="partid" name="partID" type="java.lang.Long"></property>
+		<property column="evaluation" name="evaluation" type="java.lang.Integer"></property>		
+		</class>
+</hibernate-mapping>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<decorators defaultdir="/WEB-INF/decorators">
+    <excludes>
+        <pattern>*.htm*</pattern>
+        <pattern>*/*.htm*</pattern>
+        <pattern>/css/*</pattern>
+        <pattern>/html/*</pattern>
+        <pattern>/js/*</pattern>
+        <pattern>/images/*</pattern>
+        <pattern>/dojo/*</pattern>
+        <pattern>/struts/*</pattern>
+        <pattern>/FCKeditor/*</pattern>
+        <pattern>/fckeditor/*</pattern>
+        <pattern>/*/detail*Store.do*</pattern>    
+        <pattern>/*/ajax*.do*</pattern>  
+        <pattern>/ajax*.do*</pattern>  
+        <pattern>/*/json*.do*</pattern>  
+        <pattern>/json*.do*</pattern>          
+        <pattern>/manage/list*Select.do*</pattern>
+        <pattern>/manage/Logout.do</pattern>
+        <pattern>/Preview.do*</pattern>
+        <pattern>/Login.do*</pattern>
+        <pattern>/authImage.do*</pattern>
+        <pattern>/index.jsp*</pattern>
+     </excludes>     
+
+	<decorator name="sidemenu" page="main.jsp">
+		 <pattern>*.do</pattern>			 
+	</decorator>   
+</decorators>

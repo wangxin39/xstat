@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="GBK"?>
+<!DOCTYPE validators PUBLIC "-//OpenSymphony Group//XWork Validator 1.0.2//EN"
+	"http://www.opensymphony.com/xwork/xwork-validator-1.0.2.dtd">
+
+<validators>
+	<field name="strengths">
+		<field-validator type="requiredstring">
+			<param name="trim">true</param>
+			<message>必须输入优点</message>
+		</field-validator>
+		<field-validator type="regex">
+			<param name="expression"><![CDATA[([\u4e00-\u9fa5\sA-Za-z\s0-9,\，\\r\\n\{\}『』【】\[\]《》\<\>。\.\?\？\/\(\)（）"”“、'‘：:~～％%&※！!_\-·]{4,255})]]></param>
+			<message>您输入的优点只能是中文!</message>
+		</field-validator>
+	</field>
+	<field name="enStrengths">
+		
+		<field-validator type="regex">
+			<param name="expression"><![CDATA[([a-zA-Z\s0-9,\，\{\}『』【】\[\]\\r\\n《》\<\>。\.\?\？\/\(\)（）""”“、'‘：\:~\～％\%&\※！\!_\-·]{4,255})]]></param>
+			<message>您输入的英文优点只能是字母或数字!</message>
+		</field-validator>
+	</field>
+	<field name="weaknesses">
+		<field-validator type="requiredstring">
+			<param name="trim">true</param>
+			<message>必须输入缺点</message>
+		</field-validator>
+		<field-validator type="regex">
+			<param name="expression"><![CDATA[([\u4e00-\u9fa5\sA-Za-z\s0-9,\，\\r\\n\{\}『』【】\[\]《》\<\>。\.\?\？\/\(\)（）"”“、'‘：:~～％%&※！!_\-·]{4,255})]]></param>
+			<message>您输入的缺点只能是中文!</message>
+		</field-validator>
+	</field>
+	<field name="enWeaknesses">
+		
+		<field-validator type="regex">
+			<param name="expression"><![CDATA[([a-zA-Z\s0-9,\，\{\}『』【】\[\]\\r\\n《》\<\>。\.\?\？\/\(\)（）""”“、'‘：\:~\～％\%&\※！\!_\-·]{4,255})]]></param>
+			<message>您输入的英文缺点只能是字母或数字!</message>
+		</field-validator>
+	</field>
+	<field name="conclusion">
+		<field-validator type="requiredstring">
+			<param name="trim">true</param>
+			<message>必须输入总结建议</message>
+		</field-validator>
+		<field-validator type="regex">
+			<param name="expression"><![CDATA[([\u4e00-\u9fa5\sA-Za-z\s0-9,\，\\r\\n\{\}『』【】\[\]《》\<\>。\.\?\？\/\(\)（）"”“、'‘：:~～％%&※！!_\-·]{4,255})]]></param>
+			<message>您输入的总结建议只能是中文!</message>
+		</field-validator>
+	</field>
+	<field name="enConclusion">
+		
+		<field-validator type="regex">
+			<param name="expression"><![CDATA[([a-zA-Z\s0-9,\，\{\}『』【】\[\]\\r\\n《》\<\>。\.\?\？\/\(\)（）""”“、'‘：\:~\～％\%&\※！\!_\-·]{4,255})]]></param>
+			<message>您输入的英文总结建议只能是字母或数字!</message>
+		</field-validator>
+	</field>
+</validators>

@@ -1,0 +1,52 @@
+#!/bin/sh
+#
+# This script will be executed *after* all the other init scripts.
+# You can put your own initialization stuff in here if you don't
+# want to do the full Sys V style init stuff.
+
+touch /var/lock/subsys/local
+#Authlib start
+/tmail/rc.d/authlib start
+
+#Postfix start
+/tmail/rc.d/postfix start
+
+#Mysql start
+/tmail/rc.d/mysql.server start
+
+#Imapd start
+/tmail/rc.d/imapd start
+
+#Php-cgi start
+/tmail/rc.d/phpstart.sh
+
+#Policyd start
+/tmail/rc.d/policyd.sh
+
+#Nginx start
+/tmail/httpd/sbin/nginx &
+#/tmail/rc.d/nginx
+
+/tmail/clamav/sbin/clamd
+
+#Spamd start
+/tmail/spamd/bin/spamd -u spamd -d -c -m5 -H -r /var/run/spamd.pid
+
+#dkim start
+/tmail/scripts/dkim_start.php
+#Authlib start
+
+#dkim start
+/tmail/scripts/dkim_start.php
+
+#apache
+#/usr/local/apache2/apachectl start
+#/usr/local/squid3/sbin/squid -s
+# /usr/share/denyhosts/daemon-control start  
+/usr/local/mysql/bin/mysqld_safe --user=mysql &    
+
+mount  -t  nfs 192.168.1.23:/data/images /data/images 
+mount  -t  nfs 192.168.1.23:/data/fantongweb /data/fantongweb
+mount  -t  nfs 192.168.1.23:/data/base /data/base
+mount  -t  nfs 192.168.1.23:/web/www/cms/news /webremote
+mount  -t  nfs 192.168.1.23:/web/www /web/www

@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:lang="http://www.springframework.org/schema/lang"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd http://www.springframework.org/schema/lang http://www.springframework.org/schema/lang/spring-lang-2.0.xsd">
+
+<!-- 
+	<bean id="cacheManager" 
+		class="org.springframework.cache.ehcache.EhCacheManagerFactoryBean">   
+		<property name="configLocation">   
+			<value>classpath:ehcache.xml</value>   
+		</property>
+	</bean> 
+	<bean id="localCache"  
+		class="org.springframework.cache.ehcache.EhCacheFactoryBean">   
+		<property name="cacheManager" ref="cacheManager" />   
+		<property name="cacheName"  
+			value="cn.iaicc.smgk.cache.LOCAL_CACHE" />   
+	</bean>   
+	  
+	<bean id="cacheService"  
+		class="cn.iaicc.smgk.core.cache.CacheService" init-method="init" destroy-method="destory">   
+		<property name="cacheServerList" value="${cache.servers}"/>   
+		<property name="cacheServerWeights" value="${cache.cacheServerWeights}"/>   
+		<property name="cacheCluster" value="${cache.cluster}"/>   
+		<property name="localCache" ref="localCache"/>   
+	</bean>  
+ -->
+	<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close">
+		<property name="driverClassName">
+			<value>org.gjt.mm.mysql.Driver</value>
+		</property>
+		<property name="url">
+			<value>jdbc:mysql://localhost:3306/webstatdb?useUnicode=true&amp;characterEncoding=utf8</value>
+		</property>
+		<property name="username">
+			<value>fantong</value>
+		</property>
+		<property name="password">
+			<value>123456</value>
+		</property>
+		<property name="maxActive">
+			<value>20</value>
+		</property>
+		<property name="maxIdle">
+			<value>5</value>
+		</property>
+		<property name="maxWait">
+			<value>-1</value>
+		</property>
+		<property name="defaultAutoCommit">
+			<value>true</value>
+		</property>
+	</bean>
+	<!-- 
+	<bean id="nativeJdbcExtractor" class="org.springframework.jdbc.support.nativejdbc.SimpleNativeJdbcExtractor" /> 
+	<bean id="mysqlLobHandler" class="org.springframework.jdbc.support.lob.DefaultLogHandler" lazy-init="true"> 
+		<property name="nativeJdbcExtractor"> 
+			<ref bean="nativeJdbcExtractor" /> 
+		</property> 
+	</bean> 
+	 -->
+	<bean id="sessionFactory" class="org.springframework.orm.hibernate3.LocalSessionFactoryBean">
+		<property name="dataSource">
+			<ref local="dataSource" />
+		</property>		
+		<!-- 
+		<property name="mappingDirectoryLocations">
+			<list>
+				<value>classpath:/cn/allwap/url/bo/hbms</value>
+			</list>
+		</property>
+		-->
+		<property name="mappingResources">
+			<list>		
+				<value>org/xsaas/xstat/po/hbms/AddressCatalogInfo.hbm.xml</value>
+				<value>org/xsaas/xstat/po/hbms/ArticleInfo.hbm.xml</value>				
+				<value>org/xsaas/xstat/po/hbms/CityInfo.hbm.xml</value>	
+				<value>org/xsaas/xstat/po/hbms/CheckDetailInfo.hbm.xml</value>	
+				<value>org/xsaas/xstat/po/hbms/ClientInfo.hbm.xml</value>
+				<value>org/xsaas/xstat/po/hbms/ClientAccountInfo.hbm.xml</value>
+				<value>org/xsaas/xstat/po/hbms/ClientPopedomInfo.hbm.xml</value>
+				<value>org/xsaas/xstat/po/hbms/EmailAddressInfo.hbm.xml</value>
+				<value>org/xsaas/xstat/po/hbms/EmailSendInfo.hbm.xml</value>
+				<value>org/xsaas/xstat/po/hbms/EmailDraftInfo.hbm.xml</value>
+				<value>org/xsaas/xstat/po/hbms/EmployeeInfo.hbm.xml</value>
+				<value>org/xsaas/xstat/po/hbms/InquisitionTemplateInfo.hbm.xml</value>
+				<value>org/xsaas/xstat/po/hbms/InquisitionInfo.hbm.xml</value>
+				<value>org/xsaas/xstat/po/hbms/InformantInfo.hbm.xml</value>
+				<value>org/xsaas/xstat/po/hbms/HeaderRecordInfo.hbm.xml</value>
+				<value>org/xsaas/xstat/po/hbms/PartRecordInfo.hbm.xml</value>
+				<value>org/xsaas/xstat/po/hbms/InformantEvaluationInfo.hbm.xml</value>
+				<value>org/xsaas/xstat/po/hbms/InquisitionMarkInfo.hbm.xml</value>
+				<value>org/xsaas/xstat/po/hbms/InquisitionHeaderInfo.hbm.xml</value>
+				<value>org/xsaas/xstat/po/hbms/InquisitionHeaderSelectInfo.hbm.xml</value>
+				<value>org/xsaas/xstat/po/hbms/IssueInfo.hbm.xml</value>
+				<value>org/xsaas/xstat/po/hbms/MenuInfo.hbm.xml</value>
+				<value>org/xsaas/xstat/po/hbms/PlanInfo.hbm.xml</value>
+				<value>org/xsaas/xstat/po/hbms/PartInfo.hbm.xml</value>
+				<value>org/xsaas/xstat/po/hbms/ProjectInfo.hbm.xml</value>
+				<value>org/xsaas/xstat/po/hbms/PartQuestionInfo.hbm.xml</value>
+				<value>org/xsaas/xstat/po/hbms/PartSelectInfo.hbm.xml</value>
+				<value>org/xsaas/xstat/po/hbms/PublishInfo.hbm.xml</value>
+				<value>org/xsaas/xstat/po/hbms/ResourceInfo.hbm.xml</value>
+				<value>org/xsaas/xstat/po/hbms/QuestionInfo.hbm.xml</value>
+				<value>org/xsaas/xstat/po/hbms/OptionInfo.hbm.xml</value>
+				<value>org/xsaas/xstat/po/hbms/OptionRelationInfo.hbm.xml</value>
+				<value>org/xsaas/xstat/po/hbms/OptionTemplateInfo.hbm.xml</value>								
+				<value>org/xsaas/xstat/po/hbms/ReqInfo.hbm.xml</value>
+				<value>org/xsaas/xstat/po/hbms/ReqResultInfo.hbm.xml</value>
+				<value>org/xsaas/xstat/po/hbms/ReportInfo.hbm.xml</value>
+				<value>org/xsaas/xstat/po/hbms/FinalEvaluationInfo.hbm.xml</value>
+				<value>org/xsaas/xstat/po/hbms/StatPartInfo.hbm.xml</value>
+				<value>org/xsaas/xstat/po/hbms/StatChartInfo.hbm.xml</value>
+				<value>org/xsaas/xstat/po/hbms/StatQuestionInfo.hbm.xml</value>
+				<value>org/xsaas/xstat/po/hbms/SitePopedomInfo.hbm.xml</value>
+				<value>org/xsaas/xstat/po/hbms/SmgkInfo.hbm.xml</value>
+				<value>org/xsaas/xstat/po/hbms/SmgkMenuInfo.hbm.xml</value>
+				<value>org/xsaas/xstat/po/hbms/SelectWeightInfo.hbm.xml</value>
+				<value>org/xsaas/xstat/po/hbms/RemarkInfo.hbm.xml</value>
+				<value>org/xsaas/xstat/po/hbms/OutputInfo.hbm.xml</value>
+				<value>org/xsaas/xstat/po/hbms/ThemeInfo.hbm.xml</value>
+				<value>org/xsaas/xstat/po/hbms/VideoInfo.hbm.xml</value>
+				<value>org/xsaas/xstat/po/hbms/RealityCheckInfo.hbm.xml</value>
+				<value>org/xsaas/xstat/po/hbms/ThemeStyleInfo.hbm.xml</value>
+				<value>org/xsaas/xstat/po/hbms/ReportTemplateInfo.hbm.xml</value>
+				<value>org/xsaas/xstat/po/hbms/GradeRelationInfo.hbm.xml</value>
+				<value>org/xsaas/xstat/po/hbms/GradeStdInfo.hbm.xml</value>
+				<value>org/xsaas/xstat/po/hbms/GradeStdRelationInfo.hbm.xml</value>
+			</list>
+		</property>		
+		<property name="hibernateProperties">
+			<props>
+				<prop key="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</prop>
+				<prop key="hibernate.show_sql">false</prop>
+				<prop key="hibernate.cglib.use_reflection_optimizer">true</prop>
+				<prop key="hibernate.cache.provider_class">org.hibernate.cache.EhCacheProvider</prop>
+				<prop key="hibernate.cache.use_query_cache">true</prop>
+			</props>
+		</property>
+		<!-- <property name="lobHandler" ref="oracleLobHandler" /> -->
+	</bean>
+	
+	<bean id="transactionManager"
+		class="org.springframework.orm.hibernate3.HibernateTransactionManager">
+		<property name="sessionFactory">
+			<ref bean="sessionFactory" />
+		</property>
+	</bean>
+
+	<bean id="transactionInterceptor"
+		class="org.springframework.transaction.interceptor.TransactionInterceptor">
+		<property name="transactionManager" ref="transactionManager"></property>
+		<property name="transactionAttributes">
+			<props>
+				<prop key="save*">PROPAGATION_REQUIRED</prop>
+				<prop key="add*">PROPAGATION_REQUIRED</prop>
+				<prop key="set*">PROPAGATION_REQUIRED</prop>
+				<prop key="update*">PROPAGATION_REQUIRED</prop>
+				<prop key="delete*">PROPAGATION_REQUIRED</prop>
+				<prop key="register">PROPAGATION_REQUIRED</prop>							
+				<prop key="find*">PROPAGATION_REQUIRED,readOnly</prop>
+				<prop key="valid*">PROPAGATION_REQUIRED,readOnly</prop>
+				<prop key="is*">PROPAGATION_REQUIRED,readOnly</prop>
+				<prop key="get*">PROPAGATION_REQUIRED,readOnly</prop>
+			</props>
+		</property>
+	</bean>
+
+	<bean
+		class="org.springframework.aop.framework.autoproxy.BeanNameAutoProxyCreator">
+		<property name="beanNames">
+			<value>*Service</value>
+		</property>
+		<property name="interceptorNames">
+			<value>transactionInterceptor</value>
+		</property>
+	</bean>
+
+	<bean class="org.springframework.transaction.interceptor.TransactionAttributeSourceAdvisor">
+		<property name="transactionInterceptor"	ref="transactionInterceptor">
+		</property>
+	</bean>
+
+</beans>

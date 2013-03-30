@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+		"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="org.xsaas.xstat.po">
+	<class name="ReportInfo" table="report_info">
+		<id column="reportid" name="reportID" type="java.lang.Long">
+			<generator class="identity"/>
+		</id>
+		<property column="checkname" name="checkName" type="java.lang.String"></property>
+		<property column="reporttitle" name="reportTitle" type="java.lang.String"></property>
+		<property column="quarterTitle" name="quarterTitle" type="java.lang.String"></property>
+		<property column="enreporttitle" name="enReportTitle" type="java.lang.String"></property>
+		<property column="reporttype" name="reportType" type="java.lang.Integer"></property>
+		<property column="pageCount" name="pageCount" type="java.lang.Integer"></property>
+		<property column="themeid" name="themeID" type="java.lang.Long"></property>	
+		<property column="issueid" name="issueID" type="java.lang.Long"></property>	
+		<property column="informantid" name="informantID" type="java.lang.Long"></property>	
+		<property column="addtime" name="addTime" type="java.sql.Timestamp"></property>
+		<property column="status" name="status" type="java.lang.Integer"></property>												
+	</class>
+</hibernate-mapping>

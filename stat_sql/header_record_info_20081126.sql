@@ -1,0 +1,27 @@
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE */;
+/*!40101 SET SQL_MODE='' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES */;
+/*!40103 SET SQL_NOTES='ON' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS */;
+/*!40014 SET FOREIGN_KEY_CHECKS=0 */;
+
+LOCK TABLES `header_record_info` WRITE;
+/*!40000 ALTER TABLE `header_record_info` DISABLE KEYS */;
+
+INSERT INTO `header_record_info` VALUES (1,1,1,1,1,1,1,1,1,5,1,0,'h1','222','2008-11-26 00:35:54');
+INSERT INTO `header_record_info` VALUES (2,1,1,1,1,1,1,1,2,5,2,0,'h2','23','2008-11-26 00:35:54');
+INSERT INTO `header_record_info` VALUES (3,1,1,1,1,1,1,1,3,2,3,4,'h3','1','2008-11-26 00:35:54');
+INSERT INTO `header_record_info` VALUES (4,1,1,1,1,1,1,1,4,5,4,0,'h4','asdf','2008-11-26 00:35:54');
+INSERT INTO `header_record_info` VALUES (5,1,1,1,1,1,1,1,5,5,5,0,'h5','sdfasd','2008-11-26 00:35:54');
+INSERT INTO `header_record_info` VALUES (6,1,1,1,1,1,1,1,6,5,6,0,'h6','asdf','2008-11-26 00:35:54');
+INSERT INTO `header_record_info` VALUES (7,1,1,1,1,1,1,1,8,5,8,0,'h8','asdf','2008-11-26 00:35:54');
+INSERT INTO `header_record_info` VALUES (8,1,1,1,1,1,1,1,9,5,9,0,'h9','2008-11-25','2008-11-26 00:35:54');
+INSERT INTO `header_record_info` VALUES (9,1,1,1,1,1,1,1,10,5,10,0,'h10','23','2008-11-26 00:35:54');
+INSERT INTO `header_record_info` VALUES (10,1,1,1,1,1,1,1,11,1,11,1,'h11','test','2008-11-26 00:35:54');
+
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;

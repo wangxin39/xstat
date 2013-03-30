@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application version="1.5"
+	xmlns="http://java.sun.com/xml/ns/j2ee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee
+	http://java.sun.com/xml/ns/j2ee/application_1_5.xsd">
+	<display-name>xstat</display-name>
+	<web>
+		<web-uri>xstat.war</web-uri>
+		<context-root>/xstat</context-root>
+	</web>	
+</application>

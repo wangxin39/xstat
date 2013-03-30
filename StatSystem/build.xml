@@ -1,0 +1,17 @@
+<project name="StatSystem" basedir="." default="all">
+	<property name="jar.name" value="smgkstat-1.0.jar"/>
+	
+	<target name="all">
+		<antcall target="jar"></antcall>
+	</target>
+	<target name="jar">
+		<delete file="${jar.name}"></delete>		
+		<jar jarfile="${jar.name}" manifest="MANIFEST.MF">
+			<fileset dir="bin">
+				<include name="**" />
+			</fileset>
+		</jar>
+		<copy file="smgkstat-1.0.jar" todir="..\console\stat"/>
+	</target>
+	
+</project>

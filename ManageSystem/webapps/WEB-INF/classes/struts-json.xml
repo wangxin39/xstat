@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="json" namespace="/" extends="json-default">
+   		<global-results>
+   			<result name="exception">/WEB-INF/pages/error.jsp</result>
+   			<result name="login" type="redirect">/admin</result>
+   		</global-results>   		
+   		<global-exception-mappings>
+   			<exception-mapping result="exception" exception="java.lang.Exception"/>
+   		</global-exception-mappings>
+   			
+		<action name="LeftMenu" class="org.xsaas.xstat.web.action.MenuAction">
+			<result type="json"/>
+		</action>
+		
+		<action name="checkRegister" class="org.xsaas.xstat.web.action.LoginAction" method="check">
+			<result type="json"/>
+		</action>
+		
+		<action name="checkIssue" class="org.xsaas.xstat.web.action.manage.add.AddIssueActions" method="check">
+			<result type="json"/>
+		</action>
+		
+		<action name="grid" class="org.xsaas.xstat.web.action.GridAction">
+			<result type="json"/>
+		</action>
+		<action name="partOptionList" method="option" class="org.xsaas.xstat.web.action.manage.list.ListPartOptionAction">
+			<result type="json"/>
+		</action>  			
+	</package>	
+    
+</struts>

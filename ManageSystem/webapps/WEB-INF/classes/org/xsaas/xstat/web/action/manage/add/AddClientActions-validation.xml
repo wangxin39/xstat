@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="GBK"?>
+<!DOCTYPE validators PUBLIC "-//OpenSymphony Group//XWork Validator 1.0.2//EN"
+	"http://www.opensymphony.com/xwork/xwork-validator-1.0.2.dtd">
+
+<validators>
+	<field name="company">
+		<field-validator type="requiredstring">
+			<param name="trim">true</param>
+			<message>必须输入客户名称</message>
+		</field-validator>
+		<field-validator type="regex">
+			<param name="expression"><![CDATA[([\u4e00-\u9fa5a-zA-Z0-9\s,，。！!._\-·]{2,255})]]></param>
+			<message>您输入的客户名称有非法字符或长度不在2到255以内!</message>
+		</field-validator>
+	</field>
+	<field name="enCompany">
+		<field-validator type="regex">
+			<param name="expression"><![CDATA[([a-zA-Z\s0-9,，。！!._\-·]{2,255})]]></param>
+			<message>您输入的客户英文名称只能是字母或数字,且长度在4到25之间!</message>
+		</field-validator>
+	</field>
+</validators>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+		"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="org.xsaas.xstat.po">
+	<class name="SelectWeightInfo" table="select_weight_info">
+		<id column="selectweightid" name="selectWeightID" type="java.lang.Long">
+			<generator class="identity"/>
+		</id>
+		<property column="inquisitionid" name="inquisitionID" type="java.lang.Long"></property>	
+		<property column="partid" name="partID" type="java.lang.Long"></property>
+	    <property column="partQuestionid" name="partQuestionID" type="java.lang.Long"></property>
+	    <property column="partSelectID" name="partSelectID" type="java.lang.Long"></property>
+	    <property column="optionRelationID" name="optionRelationID" type="java.lang.Long"></property>
+		<property column="weight" name="weight" type="java.lang.Integer"></property>		
+		<property column="status" name="status" type="java.lang.Integer"></property>	
+	</class>
+</hibernate-mapping>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+		"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="org.xsaas.xstat.po">
+	<class name="PartSelectInfo" table="part_select_info">
+		<id column="partselectid" name="partSelectID" type="java.lang.Long">
+			<generator class="identity"/>
+		</id>
+		<property column="inquisitionid" name="inquisitionID" type="java.lang.Long"></property>
+		<property column="partquestionid" name="partQuestionID" type="java.lang.Long"></property>
+		<property column="alterid" name="alterID" type="java.lang.Long"></property>
+		<property column="optionType" name="optionType" type="java.lang.Integer"></property>	
+		<property column="optionID" name="optionID" type="java.lang.Long"></property>
+		<property column="showNum" name="showNum" type="java.lang.String"></property>
+		<property column="showOrder" name="showOrder" type="java.lang.Integer"></property>	
+		<property column="comment" name="comment" type="java.lang.String"></property>
+		<property column="englishcomment" name="englishComment" type="java.lang.String"></property>	
+		<property column="status" name="status" type="java.lang.Integer"></property>	
+	</class>
+</hibernate-mapping>

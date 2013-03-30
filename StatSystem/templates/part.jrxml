@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"  ?>
+<!-- Created with iReport - A designer for JasperReports -->
+<!DOCTYPE jasperReport PUBLIC "//JasperReports//DTD Report Design//EN" "http://jasperreports.sourceforge.net/dtds/jasperreport.dtd">
+<jasperReport
+		 name="content"
+		 columnCount="1"
+		 printOrder="Vertical"
+		 orientation="Portrait"
+		 pageWidth="1024"
+		 pageHeight="800"
+		 columnWidth="535"
+		 columnSpacing="0"
+		 leftMargin="0"
+		 rightMargin="0"
+		 topMargin="0"
+		 bottomMargin="0"
+		 whenNoDataType="NoPages"
+		 isTitleNewPage="false"
+		 isSummaryNewPage="false">
+	<property name="ireport.scriptlethandling" value="0" />
+	<property name="ireport.encoding" value="UTF-8" />
+	<import value="java.util.*" />
+	<import value="net.sf.jasperreports.engine.*" />
+	<import value="net.sf.jasperreports.engine.data.*" />
+
+	<style 
+		name="Arial_Normal"
+		isDefault="true"
+		fontName="宋体"
+		fontSize="12"
+		isBold="false"
+		isItalic="false"
+		isUnderline="false"
+		isStrikeThrough="false"
+		pdfFontName="STSong-Light"
+		pdfEncoding="UniGB-UCS2-H"
+		isPdfEmbedded="true"
+	>
+	</style>
+	<style 
+		name="Arial_Bold"
+		isDefault="false"
+		fontName="宋体"
+		fontSize="12"
+		isBold="true"
+		isItalic="false"
+		isUnderline="false"
+		isStrikeThrough="false"
+		pdfFontName="STSong-Light"
+		pdfEncoding="UniGB-UCS2-H"
+		isPdfEmbedded="true"
+	>
+	</style>
+	<style 
+		name="Arial_Italic"
+		isDefault="false"
+		fontName="宋体"
+		fontSize="12"
+		isBold="false"
+		isItalic="true"
+		isUnderline="false"
+		isStrikeThrough="false"
+		pdfFontName="STSong-Light"
+		pdfEncoding="UniGB-UCS2-H"
+		isPdfEmbedded="true"
+	>
+	</style>
+
+
+	<field name="title" class="java.lang.String"/>
+	<field name="h1" class="java.lang.String"/>
+	<field name="v1" class="java.lang.String"/>
+	<field name="h2" class="java.lang.String"/>
+	<field name="v2" class="java.lang.String"/>
+	<field name="h3" class="java.lang.String"/>
+	<field name="v3" class="java.lang.String"/>
+	<field name="backImage" class="java.lang.String"/>
+
+		<background>
+			<band height="800"  isSplitAllowed="true" >
+				<image  scaleImage="Clip" vAlign="Bottom" hAlign="Left" onErrorType="Blank" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="10"
+						y="10"
+						width="1024"
+						height="766"
+						key="image"/>
+					<box></box>
+					<graphicElement stretchType="NoStretch"/>
+					<imageExpression class="java.lang.String"><![CDATA[$F{backImage}]]></imageExpression>
+				</image>
+			</band>
+		</background>
+		<title>
+			<band height="50"  isSplitAllowed="true" >
+			</band>
+		</title>
+		<pageHeader>
+			<band height="40"  isSplitAllowed="true" >
+			</band>
+		</pageHeader>
+		<columnHeader>
+			<band height="30"  isSplitAllowed="true" >
+			</band>
+		</columnHeader>
+		<detail>
+			<band height="377"  isSplitAllowed="true" >
+				<staticText>
+					<reportElement
+						style="Arial_Normal"
+						x="69"
+						y="30"
+						width="862"
+						height="328"
+						key="staticText-1"/>
+					<box>					<pen lineWidth="3.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<topPen lineWidth="3.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<leftPen lineWidth="3.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<bottomPen lineWidth="3.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<rightPen lineWidth="3.0" lineStyle="Solid" lineColor="#3300CC"/>
+</box>
+					<textElement>
+						<font/>
+					</textElement>
+				<text><![CDATA[]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Arial_Normal"
+						x="71"
+						y="30"
+						width="860"
+						height="75"
+						key="textField"/>
+					<box>					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+</box>
+					<textElement textAlignment="Center">
+						<font size="20" isBold="true"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{title}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Arial_Normal"
+						x="71"
+						y="105"
+						width="231"
+						height="80"
+						key="textField"/>
+					<box>					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#3300CC"/>
+</box>
+					<textElement textAlignment="Center">
+						<font size="12"/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{h1}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Arial_Normal"
+						x="71"
+						y="185"
+						width="231"
+						height="76"
+						key="textField"/>
+					<box>					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#330099"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#330099"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#330099"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#330099"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#330099"/>
+</box>
+					<textElement textAlignment="Center">
+						<font/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{h2}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Arial_Normal"
+						x="71"
+						y="261"
+						width="231"
+						height="92"
+						key="textField"/>
+					<box>					<pen lineWidth="1.0" lineColor="#330099"/>
+					<topPen lineWidth="1.0" lineColor="#330099"/>
+					<leftPen lineWidth="1.0" lineColor="#330099"/>
+					<bottomPen lineWidth="1.0" lineColor="#330099"/>
+					<rightPen lineWidth="1.0" lineColor="#330099"/>
+</box>
+					<textElement textAlignment="Center">
+						<font/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{h3}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Arial_Normal"
+						x="302"
+						y="105"
+						width="629"
+						height="80"
+						key="textField"/>
+					<box>					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#330099"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#330099"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#330099"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#330099"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#330099"/>
+</box>
+					<textElement>
+						<font/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{v1}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Arial_Normal"
+						x="302"
+						y="185"
+						width="629"
+						height="78"
+						key="textField"/>
+					<box>					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#330099"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#330099"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#330099"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#330099"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#330099"/>
+</box>
+					<textElement>
+						<font/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{v2}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						style="Arial_Normal"
+						x="302"
+						y="262"
+						width="629"
+						height="94"
+						key="textField"/>
+					<box>					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#330099"/>
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#330099"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#330099"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#330099"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#330099"/>
+</box>
+					<textElement>
+						<font/>
+					</textElement>
+				<textFieldExpression   class="java.lang.String"><![CDATA[$F{v3}]]></textFieldExpression>
+				</textField>
+			</band>
+		</detail>
+		<columnFooter>
+			<band height="45"  isSplitAllowed="true" >
+			</band>
+		</columnFooter>
+		<pageFooter>
+			<band height="55"  isSplitAllowed="true" >
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="456"
+						y="22"
+						width="100"
+						height="18"
+						key="textField"/>
+					<box></box>
+					<textElement>
+						<font/>
+					</textElement>
+				<textFieldExpression   class="java.lang.Integer"><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+			</band>
+		</pageFooter>
+		<lastPageFooter>
+			<band height="66"  isSplitAllowed="true" >
+			</band>
+		</lastPageFooter>
+		<summary>
+			<band height="93"  isSplitAllowed="true" >
+			</band>
+		</summary>
+</jasperReport>

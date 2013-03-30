@@ -1,0 +1,50 @@
+body {
+padding:0px; font-size:12px; font-family:"Arial","Verdana","ËÎÌו"
+}
+td {
+
+padding:0px; font-size:12px; font-family:"Arial","Verdana","ËÎÌו"
+
+}
+H1
+{
+
+FONT-WEIGHT: bold; FONT-SIZE: 14px; COLOR: #000000
+
+}
+table,input,textarea,select,button { 
+
+font-size:12px
+
+}
+
+td.BlockBody { 
+clear:both; text-align:left; background:#FFFFFF; padding:0px
+}
+
+td.zc { 
+COLOR: #666666
+}
+
+div.space { 
+    width:auto; margin:2px; padding:2px 
+}
+div.BlockBody { clear:both; text-align:left; background:#FFFFFF; padding:0px }
+
+
+
+A {
+	COLOR: #333; TEXT-DECORATION: none
+}
+A:hover {
+	COLOR: #c00
+}
+A.b {
+	COLOR: #333; TEXT-DECORATION: none
+}
+A.b:hover {
+	COLOR: #c00
+}
+p { 
+color:#000000
+}

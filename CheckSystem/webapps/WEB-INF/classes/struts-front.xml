@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<package name="default" extends="struts-default,jasperreports-default">
+		<result-types>
+			<result-type name="jasper" class="org.apache.struts2.views.jasperreports.JasperReportsResult"/>
+			<!--  HTML静态页面生成  -->
+			<result-type name="staticview" class="org.xsaas.xstat.web.action.FreemarkerResult"/>			
+		</result-types>	
+	
+		<global-results>
+			<result name="login" type="redirect">/admin</result>
+		</global-results>
+		
+		<action name="Login" class="org.xsaas.xstat.web.action.LoginAction">
+			<result name="input">/admin/index.jsp</result>
+			<result name="success" type="redirect">/listMain.do</result>
+		</action>
+		
+		<action name="iqList" class="org.xsaas.xstat.web.action.InquestionAction">
+		 	<result name="success" type="freemarker">${templateUrl}</result>
+		</action>
+		<action name="saveExam" class="org.xsaas.xstat.web.action.RecordAction">             
+			<result name="input" type="redirect-action">iqList</result>
+			<result name="success">/WEB-INF/jsp/Exam_add_success.jsp</result>
+		</action>
+		<action name="Register" class="org.xsaas.xstat.web.action.RegisterAction">
+		 	<result name="success">/WEB-INF/jsp/Reg_adds.jsp</result>
+		</action>
+		<action name="authImage" class="org.xsaas.xstat.web.action.AuthImgAction">
+			<result type="stream">
+	            <param name="contentType">${contentType}</param>   
+	            <param name="inputName">imageStream</param> 
+	            <param name="contentDisposition">filename=${fileName}</param>	              
+	            <param name="bufferSize">1024</param>
+			</result>
+		</action>
+	</package>	  
+
+</struts>

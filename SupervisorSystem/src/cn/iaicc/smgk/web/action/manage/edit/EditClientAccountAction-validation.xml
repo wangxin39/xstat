@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="GBK"?>
+<!DOCTYPE validators PUBLIC "-//OpenSymphony Group//XWork Validator 1.0.2//EN"
+	"http://www.opensymphony.com/xwork/xwork-validator-1.0.2.dtd">
+
+<validators>
+	<field name="clientName">
+		<field-validator type="requiredstring">
+			<param name="trim">true</param>
+			<message>必须输入帐户名称</message>
+		</field-validator>
+	</field>
+	<field name="passWord">
+		<field-validator type="requiredstring">
+			<param name="trim">true</param>
+			<message>必须输入密码</message>
+		</field-validator>
+		<field-validator type="regex">
+			<param name="expression"><![CDATA[([A-Za-z0-9_]{6,50})]]></param>
+			<message>您输入的密码只能是英文字母和数字,且长度在6到50个字以内!</message>
+		</field-validator>
+	</field>
+	<field name="loginName">
+		<field-validator type="requiredstring">
+			<param name="trim">true</param>
+			<message>必须输入登录名称，登录名称格式为电子邮件</message>
+		</field-validator>
+		<field-validator type="regex">
+			<param name="expression"><![CDATA[\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*]]></param>
+			<message>登录名称格式为电子邮件，请您输入一个有效的电子邮件地址!</message>
+		</field-validator>
+	</field>
+	<field name="telephone">
+		<field-validator type="regex">
+			<param name="expression"><![CDATA[(\d{3}-\d{8}|\d{4}-\d{7})]]></param>
+			<message>您输入的联系电话只能是数字,且长度在6到8个之间,格式为010-88888888!</message>
+		</field-validator>
+	</field>
+	<field name="mobile">
+		<field-validator type="regex">
+			<param name="expression"><![CDATA[(((13[0-9]{1})|159|150|151|155|158|)+\d{8})]]></param>
+			<message>您输入的手机号码只能是数字,手机号以13或15开头且长度为11!</message>
+		</field-validator>
+	</field>
+</validators>

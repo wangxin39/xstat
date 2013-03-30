@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+		"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="org.xsaas.xstat.po">
+	<class name="StatQuestionInfo" table="stat_question_info">
+		<id column="statID" name="statID" type="java.lang.Long">
+			<generator class="identity"/>
+		</id>
+		<property column="partid" name="partID" type="java.lang.Long"></property>
+		<property column="year" name="year" type="java.lang.Integer"></property>
+		<property column="month" name="month" type="java.lang.Integer"></property>
+		<property column="day" name="day" type="java.lang.Integer"></property>
+		<property column="checktime" name="checkTime" type="java.sql.Timestamp"></property>
+		<property column="clientid" name="clientID" type="java.lang.Long"></property>
+		<property column="projectid" name="projectID" type="java.lang.Long"></property>
+		<property column="issueid" name="issueID" type="java.lang.Long"></property>
+		<property column="round" name="round" type="java.lang.Integer"></property>
+		<property column="smgkid" name="smgkID" type="java.lang.Long"></property>
+		<property column="informantid" name="informantID" type="java.lang.Long"></property>
+		<property column="inquisitionid" name="inquisitionID" type="java.lang.Long"></property>
+		<property column="planid" name="planID" type="java.lang.Long"></property>
+		<property column="partquestionid" name="partQuestionID" type="java.lang.Long"></property>
+		<property column="optionRelationID" name="optionRelationID" type="java.lang.Long"></property>
+		<property column="partSelectID" name="partSelectID" type="java.lang.Long"></property>
+		<property column="weight" name="weight" type="java.lang.Integer"></property>
+		<property column="marks" name="marks" type="java.lang.Integer"></property>
+		<property column="status" name="status" type="java.lang.Integer"></property>	
+	</class>
+</hibernate-mapping>

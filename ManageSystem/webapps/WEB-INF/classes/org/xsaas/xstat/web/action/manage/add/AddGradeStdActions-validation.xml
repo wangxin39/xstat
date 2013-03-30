@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="GBK"?>
+<!DOCTYPE validators PUBLIC "-//OpenSymphony Group//XWork Validator 1.0.2//EN"
+	"http://www.opensymphony.com/xwork/xwork-validator-1.0.2.dtd">
+
+<validators>
+	<field name="title">
+		<field-validator type="requiredstring">
+			<param name="trim">true</param>
+			<message>请输入标题！</message>
+		</field-validator>
+		<field-validator type="regex">
+			<param name="expression"><![CDATA[([\u4e00-\u9fa5a-zA-Z0-9\s,，。！!._\-·]{2,255})]]></param>
+			<message>您输入的标题中有非法字符或长度不在2到255以内!</message>
+		</field-validator>
+	</field>
+	<field name="description">
+		<field-validator type="regex">
+			<param name="expression"><![CDATA[([\u4e00-\u9fa5a-zA-Z\s0-9,，。！!._\-·]{2,255})]]></param>
+			<message>您输入的描述只能是中文或字母或数字,且长度在4到25之间!</message>
+		</field-validator>
+	</field>
+</validators>

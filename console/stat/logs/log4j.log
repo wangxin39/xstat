@@ -1,0 +1,19 @@
+2008-12-31 11:36:11,875  INFO [cn.iaicc.smgk.main.SmgkMain:18] - 统计分析处理器启动完毕
+2008-12-31 11:36:11,875  INFO [cn.iaicc.smgk.main.SmgkMain:21] - 调查问卷处理器启动完毕
+2008-12-31 11:36:11,875  INFO [cn.iaicc.smgk.main.SmgkMain:22] - 等待执行任务  ......
+2008-12-31 11:38:01,109  WARN [org.hibernate.cfg.Environment:509] - Property [hibernate.cglib.use_reflection_optimizer] has been renamed to [hibernate.bytecode.use_reflection_optimizer]; update your properties appropriately
+2008-12-31 11:38:02,281  WARN [net.sf.ehcache.config.ConfigurationFactory:127] - No configuration found. Configuring ehcache from ehcache-failsafe.xml  found in the classpath: jar:file:/H:/smgk_project/console/stat/lib/ehcache-1.4.1.jar!/ehcache-failsafe.xml
+2008-12-31 11:38:02,890  WARN [org.hibernate.cache.EhCacheProvider:93] - Could not find configuration [org.hibernate.cache.UpdateTimestampsCache]; using defaults.
+2008-12-31 11:38:02,906  WARN [org.hibernate.cache.EhCacheProvider:93] - Could not find configuration [org.hibernate.cache.StandardQueryCache]; using defaults.
+2008-12-31 11:38:03,515 DEBUG [cn.iaicc.smgk.main.StatTool:65] - 期次:20071001
+2008-12-31 11:40:00,015 DEBUG [cn.iaicc.smgk.main.StatTool:65] - 期次:20071001
+2008-12-31 11:42:00,015 DEBUG [cn.iaicc.smgk.main.StatTool:65] - 期次:20071001
+2008-12-31 11:44:00,015 DEBUG [cn.iaicc.smgk.main.StatTool:65] - 期次:20071001
+2008-12-31 11:46:00,015 DEBUG [cn.iaicc.smgk.main.StatTool:65] - 期次:20071001
+2008-12-31 11:48:00,015 DEBUG [cn.iaicc.smgk.main.StatTool:65] - 期次:20071001
+2008-12-31 11:50:00,015 DEBUG [cn.iaicc.smgk.main.StatTool:65] - 期次:20071001
+2008-12-31 11:52:00,015 DEBUG [cn.iaicc.smgk.main.StatTool:65] - 期次:20071001
+2008-12-31 11:54:00,015 DEBUG [cn.iaicc.smgk.main.StatTool:65] - 期次:20071001
+2008-12-31 11:56:00,015 DEBUG [cn.iaicc.smgk.main.StatTool:65] - 期次:20071001
+2008-12-31 11:58:00,015 DEBUG [cn.iaicc.smgk.main.StatTool:65] - 期次:20071001
+2008-12-31 12:00:00,015 DEBUG [cn.iaicc.smgk.main.StatTool:65] - 期次:20071001

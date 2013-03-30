@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+		"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="org.xsaas.xstat.po">
+	<class name="IssueInfo" table="issue_info">
+		<id column="issueid" name="issueID" type="java.lang.Long">
+			<generator class="identity"/>
+		</id>
+		<property column="clientid" name="clientID" type="java.lang.Long"></property>
+		<property column="projectid" name="projectID" type="java.lang.Long"></property>
+		<property column="issue" name="issue" type="java.lang.String"></property>	
+		<property column="startDay" name="startDay" type="java.lang.String"></property>	
+		<property column="endDay" name="endDay" type="java.lang.String"></property>	
+		<property column="startTime" name="startTime" type="java.lang.String"></property>	
+		<property column="endTime" name="endTime" type="java.lang.String"></property>	
+		<property column="checkTime" name="checkTime" type="java.sql.Timestamp"></property>	
+		<property column="year" name="year" type="java.lang.Integer"></property>					
+		<property column="isFirst" name="isFirst" type="java.lang.Integer"></property>	
+		<property column="inquisitionid" name="inquisitionID" type="java.lang.Long"></property>		
+		<property column="actions" name="actions" type="java.lang.Integer"></property>
+		<property column="chartStatus" name="chartStatus" type="java.lang.Integer"></property>
+		<property column="statStatus" name="statStatus" type="java.lang.Integer"></property>
+		<property column="evaluationStatus" name="evaluationStatus" type="java.lang.Integer"></property>
+		<property column="reportStatus" name="reportStatus" type="java.lang.Integer"></property>
+		<property column="addtime" name="addTime" type="java.sql.Timestamp"></property>	
+		<property column="status" name="status" type="java.lang.Integer"></property>	
+	</class>
+</hibernate-mapping>

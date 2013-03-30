@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+		"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="org.xsaas.xstat.po">
+	<class name="EmployeeInfo" table="employee_info">
+		<id column="employeeid" name="employeeID" type="java.lang.Long">
+			<generator class="identity"/>
+		</id>
+	
+		<property column="status" name="status" type="java.lang.Integer"></property>				
+		<property column="name" name="name" type="java.lang.String"></property>	
+		<property column="loginname" name="loginName" type="java.lang.String"></property>				
+		<property column="password" name="passWord" type="java.lang.String"></property>	
+		<property column="sex" name="sex" type="java.lang.String"></property>	
+		<property column="depart" name="depart" type="java.lang.String"></property>
+		<property column="description" name="description" type="java.lang.String"></property>	
+		<property column="job" name="job" type="java.lang.String"></property>				
+		<property column="addtime" name="addTime" type="java.sql.Timestamp"></property>				
+	</class>
+</hibernate-mapping>

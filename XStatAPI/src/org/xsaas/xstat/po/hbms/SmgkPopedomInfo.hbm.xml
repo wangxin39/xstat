@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+		"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="org.xsaas.xstat.po">
+	<class name="SmgkPopedomInfo" table="smgk_popedom_info">
+		<id column="smgkpopedomid" name="smgkPopedomID" type="java.lang.Long">
+			<generator class="identity"/>
+		</id>
+		<property column="popedom" name="popedom" type="java.lang.Integer"></property>
+		<property column="smgkid" name="smgkID" type="java.lang.Long"></property>	
+		<property column="status" name="status" type="java.lang.Integer"></property>												
+	</class>
+</hibernate-mapping>

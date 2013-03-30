@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:lang="http://www.springframework.org/schema/lang"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd http://www.springframework.org/schema/lang http://www.springframework.org/schema/lang/spring-lang-2.0.xsd"
+	default-autowire="byName">
+	<bean id="addressCatalogInfoService" class="org.xsaas.xstat.business.service.AddressCatalogInfoService"/>
+	<bean id="articleInfoService" class="org.xsaas.xstat.business.service.ArticleInfoService"/>
+	<bean id="clientAccountInfoService" class="org.xsaas.xstat.business.service.ClientAccountInfoService"/>
+	<bean id="clientInfoService" class="org.xsaas.xstat.business.service.ClientInfoService"/>
+	<bean id="checkDetailInfoService" class="org.xsaas.xstat.business.service.CheckDetailInfoService"/>
+	<bean id="clientPopedomInfoService" class="org.xsaas.xstat.business.service.ClientPopedomInfoService"/>
+	<bean id="cityInfoService" class="org.xsaas.xstat.business.service.CityInfoService"/>
+	<bean id="emailAddressInfoService" class="org.xsaas.xstat.business.service.EmailAddressInfoService"/>
+	<bean id="emailSendInfoService" class="org.xsaas.xstat.business.service.EmailSendInfoService"/>
+	<bean id="emailDraftInfoService" class="org.xsaas.xstat.business.service.EmailDraftInfoService"/>
+	<bean id="employeeInfoService" class="org.xsaas.xstat.business.service.EmployeeInfoService"/>
+	<bean id="inquisitionTemplateInfoService" class="org.xsaas.xstat.business.service.InquisitionTemplateInfoService"/>
+	<bean id="inquisitionHeaderInfoService" class="org.xsaas.xstat.business.service.InquisitionHeaderInfoService"/>
+	<bean id="inquisitionHeaderSelectInfoService" class="org.xsaas.xstat.business.service.InquisitionHeaderSelectInfoService"/>
+	<bean id="informantEvaluationInfoService" class="org.xsaas.xstat.business.service.InformantEvaluationInfoService"/>
+	<bean id="inquisitionMarkInfoService" class="org.xsaas.xstat.business.service.InquisitionMarkInfoService"/>
+	<bean id="inquisitionInfoService" class="org.xsaas.xstat.business.service.InquisitionInfoService"/>
+	<bean id="issueInfoService" class="org.xsaas.xstat.business.service.IssueInfoService"/>
+	<bean id="headerRecordInfoService" class="org.xsaas.xstat.business.service.HeaderRecordInfoService"/>
+	<bean id="informantInfoService" class="org.xsaas.xstat.business.service.InformantInfoService"/>
+	<bean id="menuInfoService" class="org.xsaas.xstat.business.service.MenuInfoService"/>
+	<bean id="planInfoService" class="org.xsaas.xstat.business.service.PlanInfoService"/>
+	<bean id="publishInfoService" class="org.xsaas.xstat.business.service.PublishInfoService"/>
+	<bean id="partInfoService" class="org.xsaas.xstat.business.service.PartInfoService"/>
+	<bean id="partRecordInfoService" class="org.xsaas.xstat.business.service.PartRecordInfoService"/>
+	<bean id="partQuestionInfoService" class="org.xsaas.xstat.business.service.PartQuestionInfoService"/>
+	<bean id="partSelectInfoService" class="org.xsaas.xstat.business.service.PartSelectInfoService"/>
+	<bean id="projectInfoService" class="org.xsaas.xstat.business.service.ProjectInfoService"/>
+	<bean id="optionInfoService" class="org.xsaas.xstat.business.service.OptionInfoService"/>
+	<bean id="optionTemplateInfoService" class="org.xsaas.xstat.business.service.OptionTemplateInfoService"/>
+	<bean id="optionRelationInfoService" class="org.xsaas.xstat.business.service.OptionRelationInfoService"/>	
+	<bean id="resourceInfoService" class="org.xsaas.xstat.business.service.ResourceInfoService"/>
+	<bean id="questionInfoService" class="org.xsaas.xstat.business.service.QuestionInfoService"/>
+	<bean id="reqInfoService" class="org.xsaas.xstat.business.service.ReqInfoService"/>
+	<bean id="reportTemplateInfoService" class="org.xsaas.xstat.business.service.ReportTemplateInfoService"/>
+	<bean id="reqResultInfoService" class="org.xsaas.xstat.business.service.ReqResultInfoService"/>
+	<bean id="remarkInfoService" class="org.xsaas.xstat.business.service.RemarkInfoService"/>
+	<bean id="reportInfoService" class="org.xsaas.xstat.business.service.ReportInfoService"/>
+	<bean id="finalEvaluationInfoService" class="org.xsaas.xstat.business.service.FinalEvaluationInfoService"/>
+	<bean id="smgkInfoService" class="org.xsaas.xstat.business.service.SmgkInfoService"/>
+	<bean id="smgkMenuInfoService" class="org.xsaas.xstat.business.service.SmgkMenuInfoService"/>
+	<bean id="statQuestionInfoService" class="org.xsaas.xstat.business.service.StatQuestionInfoService"/>
+	<bean id="statPartInfoService" class="org.xsaas.xstat.business.service.StatPartInfoService"/>
+	<bean id="statChartInfoService" class="org.xsaas.xstat.business.service.StatChartInfoService"/>
+	<bean id="sitePopedomInfoService" class="org.xsaas.xstat.business.service.SitePopedomInfoService"/>
+	<bean id="selectWeightInfoService" class="org.xsaas.xstat.business.service.SelectWeightInfoService"/>
+	<bean id="themeInfoService" class="org.xsaas.xstat.business.service.ThemeInfoService"/>
+	<bean id="themeStyleInfoService" class="org.xsaas.xstat.business.service.ThemeStyleInfoService"/>
+	<bean id="outputInfoService" class="org.xsaas.xstat.business.service.OutputInfoService"/>
+	<bean id="videoInfoService" class="org.xsaas.xstat.business.service.VideoInfoService"/>
+	<bean id="realityCheckInfoService" class="org.xsaas.xstat.business.service.RealityCheckInfoService"/>
+	<bean id="gradeRelationInfoService" class="org.xsaas.xstat.business.service.GradeRelationInfoService"/>
+	<bean id="gradeStdInfoService" class="org.xsaas.xstat.business.service.GradeStdInfoService"/>
+	<bean id="gradeStdRelationInfoService" class="org.xsaas.xstat.business.service.GradeStdRelationInfoService"/>	
+</beans>

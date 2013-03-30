@@ -1,0 +1,1 @@
+java -jar -Xms128m -Xmx512m smgkstat-1.0.jar

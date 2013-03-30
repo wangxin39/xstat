@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+		"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="org.xsaas.xstat.po">
+	<class name="InformantInfo" table="informant_info">
+		<id column="informantid" name="informantID" type="java.lang.Long">
+			<generator class="identity"/>
+		</id>
+		<property column="clientid" name="clientID" type="java.lang.Long"></property>
+		<property column="name" name="name" type="java.lang.String"></property>	
+		<property column="englishName" name="englishName" type="java.lang.String"></property>				
+		<property column="aliasName" name="aliasName" type="java.lang.String"></property>				
+		<property column="englishaliasname" name="englishAliasName" type="java.lang.String"></property>
+		<property column="country" name="country" type="java.lang.String"></property>					
+		<property column="province" name="province" type="java.lang.Integer"></property>				
+		<property column="cityID" name="cityID" type="java.lang.Long"></property>				
+		<property column="telephone" name="telephone" type="java.lang.String"></property>	
+		<property column="mobile" name="mobile" type="java.lang.String"></property>				
+		<property column="email" name="email" type="java.lang.String"></property>				
+		<property column="address" name="address" type="java.lang.String"></property>	
+		<property column="postcode" name="postCode" type="java.lang.String"></property>	
+		<property column="servicetime" name="serviceTime" type="java.sql.Timestamp"></property>
+		<property column="servicelang" name="serviceLang" type="java.lang.String"></property>	
+		<property column="servicetype" name="serviceType" type="java.lang.String"></property>	
+		<property column="area" name="area" type="java.lang.String"></property>		
+		<property column="status" name="status" type="java.lang.Integer"></property>										
+	</class>
+</hibernate-mapping>

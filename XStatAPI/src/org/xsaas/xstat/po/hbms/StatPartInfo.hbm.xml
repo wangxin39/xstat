@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+		"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="org.xsaas.xstat.po">
+	<class name="StatPartInfo" table="stat_part_info">
+		<id column="statpartID" name="statPartID" type="java.lang.Long">
+			<generator class="identity"/>
+		</id>
+		<property column="year" name="year" type="java.lang.Integer"></property>
+		<property column="month" name="month" type="java.lang.Integer"></property>
+		<property column="day" name="day" type="java.lang.Integer"></property>
+		<property column="checktime" name="checkTime" type="java.sql.Timestamp"></property>
+		<property column="clientid" name="clientID" type="java.lang.Long"></property>
+		<property column="projectid" name="projectID" type="java.lang.Long"></property>
+		<property column="issueid" name="issueID" type="java.lang.Long"></property>
+		<property column="round" name="round" type="java.lang.Integer"></property>
+		<property column="smgkid" name="smgkID" type="java.lang.Long"></property>
+		<property column="informantid" name="informantID" type="java.lang.Long"></property>
+		<property column="inquisitionid" name="inquisitionID" type="java.lang.Long"></property>
+		<property column="planid" name="planID" type="java.lang.Long"></property>
+		<property column="partid" name="partID" type="java.lang.Long"></property>
+		<property column="weightedmark" name="weightedMark" type="java.lang.Integer"></property>		
+		<property column="actualmarks" name="actualMarks" type="java.lang.Integer"></property>
+		<property column="percentage" name="percentage" type="java.lang.Double"></property>
+		<property column="status" name="status" type="java.lang.Integer"></property>	
+	</class>
+</hibernate-mapping>

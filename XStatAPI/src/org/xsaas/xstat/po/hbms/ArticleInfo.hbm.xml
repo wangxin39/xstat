@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" 
+		"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="org.xsaas.xstat.po">
+	<class name="ArticleInfo" table="article_info">
+		<id column="articleid" name="articleID" type="java.lang.Long">
+			<generator class="identity"/>
+		</id>
+		<property column="title" name="title" type="java.lang.String"></property>				
+		<property column="content" name="content" type="java.lang.String"></property>
+		<property column="author" name="author" type="java.lang.String"></property>				
+		<property column="source" name="source" type="java.lang.String"></property>		
+		<property column="status" name="status" type="java.lang.Integer"></property>
+		<property column="addtime" name="addTime" type="java.sql.Timestamp"></property>									
+	</class>
+</hibernate-mapping>

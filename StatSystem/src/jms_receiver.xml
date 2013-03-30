@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:amq="http://activemq.org/config/1.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+ 	http://activemq.org/config/1.0 http://activemq.apache.org/schema/core/activemq-core-5.0.0.xsd">
+	    
+	<bean id="connectionFactory" class="org.apache.activemq.pool.PooledConnectionFactory" destroy-method="stop" lazy-init="true"> 
+	    <property name="connectionFactory"> 
+		     <bean class="org.apache.activemq.ActiveMQConnectionFactory"> 
+		        <property name="brokerURL">
+		        	<value>failover:(tcp://localhost:61616)?initialReconnectDelay=100</value>
+		        </property> 
+		     </bean> 
+	    </property> 
+	</bean> 
+
+	<bean id="dest" class="org.apache.activemq.command.ActiveMQQueue"> 
+	    <constructor-arg value="recordQueue"></constructor-arg> 
+	</bean>
+
+	<!-- 
+	<bean id="simpleConverter" class="org.springframework.jms.support.converter.SimpleMessageConverter"/>	
+	<bean id="messageConvert" class="cn.iaicc.smgk.jms.MessageConvert">
+		<property name="converter" ref="simpleConverter"></property>
+	</bean>
+	 -->
+	    
+	<bean id="jmsTemplate" class="org.springframework.jms.core.JmsTemplate"> 
+	    <property name="connectionFactory">
+			<bean class="org.springframework.jms.connection.SingleConnectionFactory">
+				<property name="targetConnectionFactory" ref="connectionFactory" />
+			</bean>	    
+	    </property>
+	    <property name="timeToLive" value="86400000" />
+	    <property name="defaultDestination" ref="dest"></property> 
+	    <property name="receiveTimeout" value="30000" />
+	    <property name="sessionTransacted" value="false" />
+   	    <property name="sessionAcknowledgeModeName" value="CLIENT_ACKNOWLEDGE" />
+   	    <property name="deliveryPersistent" value="true"/>
+   	    <property name="deliveryMode" value="2"/>
+   	    <!--  
+	    <property name="sessionTransacted" value="true" />
+   	    <property name="messageConverter" ref="messageConvert"/>
+   	    -->
+	</bean> 
+
+	<bean id="recordListener" class="org.springframework.jms.listener.adapter.MessageListenerAdapter">
+		<constructor-arg>
+			<bean class="cn.iaicc.smgk.jms.RecordListener" />
+		</constructor-arg>
+		<property name="defaultListenerMethod" value="onMessage"/>
+		<!-- 
+		<property name="messageConvert" ref="messageConvert"/>
+		 -->
+	</bean>
+	
+	<!-- 
+	<bean id="transactionManager" class="org.springframework.transaction.jta.JtaTransactionManager" />
+	 -->
+	
+	<bean id="listenerContainer" class="org.springframework.jms.listener.DefaultMessageListenerContainer">
+		<property name="connectionFactory" ref="connectionFactory" />
+		<property name="destination" ref="dest"></property>
+		<property name="messageListener" ref="recordListener" />
+		<property name="concurrentConsumers" value="50"></property>
+		<property name="sessionAcknowledgeModeName" value="CLIENT_ACKNOWLEDGE"></property>
+		<!-- 
+		<property name="transactionManager" value="transactionManager" />
+		 -->
+	</bean>
+	
+</beans>

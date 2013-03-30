@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:lang="http://www.springframework.org/schema/lang"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd http://www.springframework.org/schema/lang http://www.springframework.org/schema/lang/spring-lang-2.0.xsd"
+	default-autowire="byName">	
+	<bean id="addressCatalogInfoDao" class="org.xsaas.xstat.dao.hibernate.AddressCatalogInfoDao"/>
+	<bean id="articleInfoDao" class="org.xsaas.xstat.dao.hibernate.ArticleInfoDao"/>	
+	<bean id="clientAccountInfoDao" class="org.xsaas.xstat.dao.hibernate.ClientAccountInfoDao"/>
+	<bean id="clientInfoDao" class="org.xsaas.xstat.dao.hibernate.ClientInfoDao"/>
+	<bean id="clientPopedomInfoDao" class="org.xsaas.xstat.dao.hibernate.ClientPopedomInfoDao"/>
+	<bean id="cityInfoDao" class="org.xsaas.xstat.dao.hibernate.CityInfoDao"/>
+	<bean id="checkDetailInfoDao" class="org.xsaas.xstat.dao.hibernate.CheckDetailInfoDao"/>
+	<bean id="emailAddressInfoDao" class="org.xsaas.xstat.dao.hibernate.EmailAddressInfoDao"/>
+	<bean id="emailSendInfoDao" class="org.xsaas.xstat.dao.hibernate.EmailSendInfoDao"/>
+	<bean id="emailDraftInfoDao" class="org.xsaas.xstat.dao.hibernate.EmailDraftInfoDao"/>
+	<bean id="employeeInfoDao" class="org.xsaas.xstat.dao.hibernate.EmployeeInfoDao"/>
+	<bean id="informantEvaluationInfoDao" class="org.xsaas.xstat.dao.hibernate.InformantEvaluationInfoDao"/>
+	<bean id="inquisitionMarkInfoDao" class="org.xsaas.xstat.dao.hibernate.InquisitionMarkInfoDao"/>
+	<bean id="inquisitionTemplateInfoDao" class="org.xsaas.xstat.dao.hibernate.InquisitionTemplateInfoDao"/>
+	<bean id="inquisitionHeaderInfoDao" class="org.xsaas.xstat.dao.hibernate.InquisitionHeaderInfoDao"/>
+	<bean id="inquisitionHeaderSelectInfoDao" class="org.xsaas.xstat.dao.hibernate.InquisitionHeaderSelectInfoDao"/>
+	<bean id="inquisitionInfoDao" class="org.xsaas.xstat.dao.hibernate.InquisitionInfoDao"/>
+	<bean id="issueInfoDao" class="org.xsaas.xstat.dao.hibernate.IssueInfoDao"/>
+	<bean id="headerRecordInfoDao" class="org.xsaas.xstat.dao.hibernate.HeaderRecordInfoDao"/>
+	<bean id="informantInfoDao" class="org.xsaas.xstat.dao.hibernate.InformantInfoDao"/>
+	<bean id="menuInfoDao" class="org.xsaas.xstat.dao.hibernate.MenuInfoDao"/>
+	<bean id="planInfoDao" class="org.xsaas.xstat.dao.hibernate.PlanInfoDao"/>
+	<bean id="publishInfoDao" class="org.xsaas.xstat.dao.hibernate.PublishInfoDao"/>
+	<bean id="partInfoDao" class="org.xsaas.xstat.dao.hibernate.PartInfoDao"/>
+	<bean id="partQuestionInfoDao" class="org.xsaas.xstat.dao.hibernate.PartQuestionInfoDao"/>
+	<bean id="partSelectInfoDao" class="org.xsaas.xstat.dao.hibernate.PartSelectInfoDao"/>
+	<bean id="partRecordInfoDao" class="org.xsaas.xstat.dao.hibernate.PartRecordInfoDao"/>	
+	<bean id="projectInfoDao" class="org.xsaas.xstat.dao.hibernate.ProjectInfoDao"/>
+	<bean id="optionInfoDao" class="org.xsaas.xstat.dao.hibernate.OptionInfoDao"/>
+	<bean id="optionTemplateInfoDao" class="org.xsaas.xstat.dao.hibernate.OptionTemplateInfoDao"/>
+	<bean id="optionRelationInfoDao" class="org.xsaas.xstat.dao.hibernate.OptionRelationInfoDao"/>		
+	<bean id="resourceInfoDao" class="org.xsaas.xstat.dao.hibernate.ResourceInfoDao"/>
+	<bean id="questionInfoDao" class="org.xsaas.xstat.dao.hibernate.QuestionInfoDao"/>
+	<bean id="reqInfoDao" class="org.xsaas.xstat.dao.hibernate.ReqInfoDao"/>
+	<bean id="reqResultInfoDao" class="org.xsaas.xstat.dao.hibernate.ReqResultInfoDao"/>
+	<bean id="remarkInfoDao" class="org.xsaas.xstat.dao.hibernate.RemarkInfoDao"/>
+	<bean id="reportInfoDao" class="org.xsaas.xstat.dao.hibernate.ReportInfoDao"/>
+	<bean id="finalEvaluationInfoDao" class="org.xsaas.xstat.dao.hibernate.FinalEvaluationInfoDao"/>
+	<bean id="smgkInfoDao" class="org.xsaas.xstat.dao.hibernate.SmgkInfoDao"/>
+	<bean id="smgkMenuInfoDao" class="org.xsaas.xstat.dao.hibernate.SmgkMenuInfoDao"/>
+	<bean id="statQuestionInfoDao" class="org.xsaas.xstat.dao.hibernate.StatQuestionInfoDao"/>
+	<bean id="statPartInfoDao" class="org.xsaas.xstat.dao.hibernate.StatPartInfoDao"/>
+	<bean id="statChartInfoDao" class="org.xsaas.xstat.dao.hibernate.StatChartInfoDao"/>
+	<bean id="sitePopedomInfoDao" class="org.xsaas.xstat.dao.hibernate.SitePopedomInfoDao"/>
+	<bean id="selectWeightInfoDao" class="org.xsaas.xstat.dao.hibernate.SelectWeightInfoDao"/>
+	<bean id="outputInfoDao" class="org.xsaas.xstat.dao.hibernate.OutputInfoDao"/>
+	<bean id="reportTemplateInfoDao" class="org.xsaas.xstat.dao.hibernate.ReportTemplateInfoDao"/>
+	<bean id="themeInfoDao" class="org.xsaas.xstat.dao.hibernate.ThemeInfoDao"/>
+	<bean id="videoInfoDao" class="org.xsaas.xstat.dao.hibernate.VideoInfoDao"/>
+	<bean id="realityCheckInfoDao" class="org.xsaas.xstat.dao.hibernate.RealityCheckInfoDao"/>
+	<bean id="themeStyleInfoDao" class="org.xsaas.xstat.dao.hibernate.ThemeStyleInfoDao"/>
+	<bean id="gradeRelationInfoDao" class="org.xsaas.xstat.dao.hibernate.GradeRelationInfoDao"/>
+	<bean id="gradeStdInfoDao" class="org.xsaas.xstat.dao.hibernate.GradeStdInfoDao"/>
+	<bean id="gradeStdRelationInfoDao" class="org.xsaas.xstat.dao.hibernate.GradeStdRelationInfoDao"/>		
+</beans>	
